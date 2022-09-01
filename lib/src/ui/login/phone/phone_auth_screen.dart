@@ -3,7 +3,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter/material.dart';
-import 'package:kopa/home_screen.dart';
+import 'package:kopa/src/ui/home/home_screen.dart';
 
 class PhoneAuthScreen extends StatefulWidget {
   const PhoneAuthScreen({Key? key}) : super(key: key);
