@@ -1,7 +1,7 @@
-import 'package:get/get.dart';
-import 'package:kopa/src/ui/splah/splash_screen.dart';
+import 'package:kopa/src/ui/splah/animated_splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: AnimatedSplashScreenWidget(),
     );
   }
 }

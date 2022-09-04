@@ -3,15 +3,15 @@ import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';
 
 class CustomInputFieldWidget extends StatefulWidget {
-  final TextEditingController? controller;
+  final TextEditingController controller;
   final String? prefix;
   final bool obscure;
 
   const CustomInputFieldWidget({
     Key? key,
-    this.controller,
-    this.prefix,
+    required this.controller,
     required this.obscure,
+    this.prefix,
   }) : super(key: key);
 
   @override
@@ -20,31 +20,35 @@ class CustomInputFieldWidget extends StatefulWidget {
 
 class _CustomInputFieldWidgetState extends State<CustomInputFieldWidget> {
   final controller = TextEditingController();
-  final prefix = "";
   final obscure = false;
+  final prefix = "";
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 45),
       child: TextField(
-        obscureText: obscure,
-        controller: controller,
-        maxLength: 10,
-        style: fontInputText,
         keyboardType: TextInputType.phone,
+        controller: controller,
+        style: fontInputText,
+        obscureText: obscure,
+        maxLength: 10,
         decoration: InputDecoration(
           prefix: Padding(
-            padding: const EdgeInsets.only(left: 30, top: 5, bottom: 5),
+            padding: const EdgeInsets.only(
+              left: 30,
+              top: 5,
+              bottom: 5,
+            ),
             child: Text(prefix),
           ),
-          hintStyle: fontInputText,
           counterStyle: const TextStyle(color: colorBackground),
+          prefixStyle: fontInputText,
+          hintStyle: fontInputText,
           //
           //Error text
           // errorText: 'Номер введено невiрно',
           // errorStyle: fontErrorText,
-          prefixStyle: fontInputText,
           contentPadding: const EdgeInsets.only(left: 10),
           // Focus
           focusedBorder: const OutlineInputBorder(

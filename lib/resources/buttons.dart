@@ -1,8 +1,9 @@
 import 'package:get/get_rx/src/rx_typedefs/rx_typedefs.dart';
 import 'package:kopa/resources/asset_pathes.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kopa/resources/colors.dart';
-import 'package:flutter/material.dart';
 import 'package:kopa/resources/fonts.dart';
+import 'package:flutter/material.dart';
 
 // Enter button
 class EnterButtonWidget extends StatelessWidget {
@@ -48,16 +49,16 @@ class LongBlueButtonWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 45),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: colorPrimary,
           minimumSize: const Size.fromHeight(45),
+          primary: colorPrimary,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),
           ),
         ),
         onPressed: onPressed,
         child: Text(
-          text,
           style: fontLongBlueButton,
+          text,
         ),
       ),
     );
@@ -66,26 +67,26 @@ class LongBlueButtonWidget extends StatelessWidget {
 
 // Register button
 class RegisterButonWidget extends StatelessWidget {
-  final String imagePath;
+  final String svgPath;
   final Callback onTap;
   final Color color;
 
   const RegisterButonWidget({
     Key? key,
-    required this.imagePath,
+    required this.svgPath,
     required this.onTap,
     required this.color,
   }) : super(key: key);
 
   _buttonRegisterStyle(Color color) {
     return BoxDecoration(
-      color: color,
       shape: BoxShape.circle,
+      color: color,
       boxShadow: [
         BoxShadow(
-          color: color,
-          blurRadius: 25,
           spreadRadius: 1,
+          blurRadius: 25,
+          color: color,
         ),
       ],
     );
@@ -94,12 +95,17 @@ class RegisterButonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: _buttonRegisterStyle(color),
       height: 70,
       width: 70,
-      decoration: _buttonRegisterStyle(color),
       child: GestureDetector(
         onTap: onTap,
-        child: Image.asset(imagePath),
+        child: SvgPicture.asset(
+          fit: BoxFit.scaleDown,
+          height: 25,
+          width: 25,
+          svgPath,
+        ),
       ),
     );
   }

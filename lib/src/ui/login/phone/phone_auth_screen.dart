@@ -1,9 +1,14 @@
 // ignore_for_file: avoid_print
 
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:flutter/material.dart';
+import 'package:kopa/resources/custome_text_field.dart';
 import 'package:kopa/src/ui/home/home_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:kopa/resources/asset_pathes.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:kopa/resources/buttons.dart';
+import 'package:kopa/resources/colors.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class PhoneAuthScreen extends StatefulWidget {
   const PhoneAuthScreen({Key? key}) : super(key: key);
@@ -15,72 +20,42 @@ class PhoneAuthScreen extends StatefulWidget {
 class _LoginScreenState extends State<PhoneAuthScreen> {
   TextEditingController phoneController = TextEditingController();
   TextEditingController otpController = TextEditingController();
-
   FirebaseAuth auth = FirebaseAuth.instance;
+  String verificationID = "";
   bool otpVisibility = false;
   User? user;
-  String verificationID = "";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Phone Auth",
-          style: TextStyle(
-            fontSize: 20,
-          ),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.indigo[900],
-      ),
-      body: Container(
-        margin: const EdgeInsets.all(10),
+      backgroundColor: colorBackground,
+      body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextField(
-              controller: phoneController,
-              decoration: const InputDecoration(
-                hintText: 'Phone Number',
-              ),
-              maxLength: 13,
-              keyboardType: TextInputType.phone,
+            Align(
+              alignment: Alignment.topRight,
+              child: Image.asset(pathSmallTriangle),
             ),
-            Visibility(
-              visible: otpVisibility,
-              child: TextField(
-                controller: otpController,
-                decoration: const InputDecoration(
-                  hintText: 'OTP',
-                  prefix: Padding(
-                    padding: EdgeInsets.all(4),
-                    child: Text(''),
-                  ),
-                ),
-                maxLength: 6,
-                keyboardType: TextInputType.number,
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            MaterialButton(
-              color: Colors.indigo[900],
-              onPressed: () {
-                if (otpVisibility) {
-                  verifyOTP();
-                } else {
-                  loginWithPhone();
-                }
-              },
-              child: Text(
-                otpVisibility ? "Verify" : "Login",
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
+            const SizedBox(height: 60),
+            Container(
+              height: 410,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(pathSplashScreen),
+                  scale: 0.9,
                 ),
               ),
+            ),
+            EnterButtonWidget(onTap: () => Get.to(() => const HomeScreen())),
+            const SizedBox(height: 40),
+            CustomInputFieldWidget(
+              controller: otpVisibility ? otpController : phoneController,
+              obscure: otpVisibility ? true : false,
+              prefix: otpVisibility ? null : "+38",
+            ),
+            LongBlueButtonWidget(
+              onPressed: otpVisibility ? verifyOTP : loginWithPhone,
+              text: otpVisibility ? "Далi" : "Верифiкувати",
             ),
           ],
         ),
@@ -91,9 +66,18 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
   void loginWithPhone() async {
     auth.verifyPhoneNumber(
       phoneNumber: "+38 ${phoneController.text}",
+      // phoneNumber: phoneController.text,
       verificationCompleted: (PhoneAuthCredential credential) async {
         await auth.signInWithCredential(credential).then((value) {
-          print("You are logged in successfully");
+          Fluttertoast.showToast(
+            msg: "Успiх!",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 2,
+            backgroundColor: colorBackground,
+            textColor: colorTextWhite,
+            fontSize: 14.0,
+          );
         });
       },
       verificationFailed: (FirebaseAuthException e) {
@@ -121,30 +105,16 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
     ).whenComplete(
       () {
         if (user != null) {
-          Fluttertoast.showToast(
-            msg: "You are logged in successfully",
-            toastLength: Toast.LENGTH_SHORT,
-            gravity: ToastGravity.BOTTOM,
-            timeInSecForIosWeb: 1,
-            backgroundColor: Colors.transparent,
-            textColor: Colors.black,
-            fontSize: 16.0,
-          );
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const HomeScreen(),
-            ),
-          );
+          Get.to(() => const HomeScreen());
         } else {
           Fluttertoast.showToast(
-            msg: "your login is failed",
+            msg: "Помилка",
             toastLength: Toast.LENGTH_SHORT,
             gravity: ToastGravity.BOTTOM,
-            timeInSecForIosWeb: 1,
-            backgroundColor: Colors.red,
-            textColor: Colors.white,
-            fontSize: 16.0,
+            timeInSecForIosWeb: 2,
+            backgroundColor: colorBackground,
+            textColor: colorTextWhite,
+            fontSize: 14.0,
           );
         }
       },

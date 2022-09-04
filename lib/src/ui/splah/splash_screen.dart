@@ -20,9 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
       const Duration(
         seconds: 2,
       ),
-      () => Get.to(
-        const LoginScreen(),
-      ),
+      () => Get.to(() => const LoginScreen()),
     );
   }
 
@@ -35,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
           Align(
             alignment: Alignment.topRight,
             child: Image.asset(
-              pathLittleTriangle,
+              pathSmallTriangle,
             ),
           ),
           const SizedBox(

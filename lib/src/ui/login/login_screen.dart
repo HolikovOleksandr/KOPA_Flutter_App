@@ -24,7 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Align(
               alignment: Alignment.topRight,
               child: Image.asset(
-                pathLittleTriangle,
+                pathSmallTriangle,
               ),
             ),
             const SizedBox(
@@ -42,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             EnterButtonWidget(
-              onTap: () => Get.to(const HomeScreen()),
+              onTap: () => Get.to(() => const HomeScreen()),
             ),
             const SizedBox(height: 40),
             Padding(
@@ -51,17 +51,17 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   RegisterButonWidget(
-                    imagePath: pathPhoneIcon,
+                    svgPath: pathPhoneIcon,
                     color: colorRegisterButtonPhone,
-                    onTap: () => Get.to(const PhoneAuthScreen()),
+                    onTap: () => Get.to(() => const PhoneAuthScreen()),
                   ),
                   RegisterButonWidget(
-                    imagePath: pathFacebookIcon,
+                    svgPath: pathFacebookIcon,
                     color: colorRegisterButtonFacebook,
                     onTap: () {},
                   ),
                   RegisterButonWidget(
-                    imagePath: pathGoogleIcon,
+                    svgPath: pathGoogleIcon,
                     color: colorRegisterButtonGoogle,
                     onTap: () {},
                   ),
