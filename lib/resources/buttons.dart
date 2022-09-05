@@ -23,9 +23,9 @@ class EnterButtonWidget extends StatelessWidget {
         ),
         TextButton(
           onPressed: onTap,
-          child: const Text(
+          child: Text(
             'Вхiд',
-            style: fontEnterButton,
+            style: fontSize26.copyWith(color: colorTextWhite),
           ),
         ),
       ],
@@ -57,7 +57,7 @@ class LongBlueButtonWidget extends StatelessWidget {
         ),
         onPressed: onPressed,
         child: Text(
-          style: fontLongBlueButton,
+          style: fontSize16,
           text,
         ),
       ),

@@ -30,7 +30,9 @@ class _CustomInputFieldWidgetState extends State<CustomInputFieldWidget> {
       child: TextField(
         keyboardType: TextInputType.phone,
         controller: controller,
-        style: fontInputText,
+        style: fontSize14.copyWith(
+          color: colorTextWhite,
+        ),
         obscureText: obscure,
         maxLength: 10,
         decoration: InputDecoration(
@@ -40,16 +42,26 @@ class _CustomInputFieldWidgetState extends State<CustomInputFieldWidget> {
               top: 5,
               bottom: 5,
             ),
-            child: Text(prefix),
+            child: Text(
+              prefix,
+            ),
           ),
-          counterStyle: const TextStyle(color: colorBackground),
-          prefixStyle: fontInputText,
-          hintStyle: fontInputText,
+          counterStyle: fontSize10.copyWith(
+            color: colorBackground,
+          ),
+          prefixStyle: fontSize14.copyWith(
+            color: colorTextWhite,
+          ),
+          hintStyle: fontSize14.copyWith(
+            color: colorTextWhite,
+          ),
           //
           //Error text
           // errorText: 'Номер введено невiрно',
-          // errorStyle: fontErrorText,
-          contentPadding: const EdgeInsets.only(left: 10),
+          // errorStyle: fontSize10,
+          contentPadding: const EdgeInsets.only(
+            left: 10,
+          ),
           // Focus
           focusedBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(

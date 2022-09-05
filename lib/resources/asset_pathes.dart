@@ -6,3 +6,4 @@ const String pathSplashScreen = 'assets/images/splash.png';
 const String pathGoogleIcon = 'assets/images/google.svg';
 const String pathPhoneIcon = 'assets/images/phone.svg';
 const String pathSoartIcon = 'assets/images/soart.svg';
+const String pathSneaker = 'assets/images/sneaker.png';

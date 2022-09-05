@@ -1,30 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:kopa/resources/colors.dart';
 
-const fontEnterButton = TextStyle(
+const fontSize26 = TextStyle(
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w400,
   fontSize: 28,
-  color: colorTextWhite,
-  letterSpacing: 0.4,
-  wordSpacing: 41,
 );
 
-const fontInputText = TextStyle(
+const fontSize22 = TextStyle(
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w400,
-  fontSize: 14,
-  color: colorTextWhite,
+  fontSize: 22,
 );
 
-const fontLongBlueButton = TextStyle(
+const fontSize16 = TextStyle(
   fontFamily: 'Poppins',
   fontSize: 16,
   fontWeight: FontWeight.w400,
 );
 
-const fontErrorText = TextStyle(
-  color: colorErrorInput,
+const fontSize14 = TextStyle(
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w400,
+  fontSize: 14,
+);
+
+const fontSize10 = TextStyle(
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w400,
   fontSize: 10,
