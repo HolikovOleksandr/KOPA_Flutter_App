@@ -18,9 +18,9 @@ class PhoneAuthScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<PhoneAuthScreen> {
-  late TextEditingController phoneController;
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController otpController = TextEditingController();
   FirebaseAuth auth = FirebaseAuth.instance;
-  late TextEditingController otpController;
   bool otpVisibility = false;
   String verificationID = "";
   User? user;
