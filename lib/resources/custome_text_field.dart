@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 
 class CustomInputFieldWidget extends StatefulWidget {
   final TextEditingController controller;
-  final String? prefix;
+  final String prefix;
   final bool obscure;
 
   const CustomInputFieldWidget({
     Key? key,
     required this.controller,
     required this.obscure,
-    this.prefix,
+    required this.prefix,
   }) : super(key: key);
 
   @override

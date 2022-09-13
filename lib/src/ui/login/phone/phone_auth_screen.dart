@@ -51,7 +51,7 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
             CustomInputFieldWidget(
               controller: otpVisibility ? otpController : phoneController,
               obscure: otpVisibility ? true : false,
-              prefix: otpVisibility ? null : "+38",
+              prefix: otpVisibility ? "" : "+38",
             ),
             LongBlueButtonWidget(
               onPressed: otpVisibility ? verifyOTP : loginWithPhone,

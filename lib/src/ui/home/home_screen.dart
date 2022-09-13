@@ -60,13 +60,13 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
         onTap: (int index) {
-          setState(() {
-            selectedPage = index;
-          });
+          setState(
+            () {
+              selectedPage = index;
+            },
+          );
         },
       ),
     );
   }
 }
-
-// Product card

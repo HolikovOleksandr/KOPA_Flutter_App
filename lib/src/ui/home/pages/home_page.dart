@@ -48,6 +48,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
             child: ListView(
+              // controller: ScrollController.,
               scrollDirection: Axis.vertical,
               children: const [
                 ProductCardWidget(),
