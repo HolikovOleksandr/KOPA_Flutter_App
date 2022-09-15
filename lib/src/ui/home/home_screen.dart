@@ -32,31 +32,72 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: colorBackground,
       body: _pageOption[selectedPage],
       bottomNavigationBar: ConvexAppBar(
-        style: TabStyle.react,
+        style: TabStyle.fixedCircle,
+        activeColor: colorPrimary,
         initialActiveIndex: selectedPage,
         backgroundColor: colorNavBarBg,
         height: MediaQuery.of(context).size.height * 0.09,
         //TODO: Fix icon`s size
         items: [
           TabItem(
-            icon: SvgPicture.asset(pathWindowIcon, color: colorDisableIcon),
-            activeIcon: SvgPicture.asset(pathWindowIcon, color: colorPrimary),
+            icon: SvgPicture.asset(
+              pathWindowIcon,
+              color: colorDisableIcon,
+              height: 22,
+              width: 22,
+            ),
+            activeIcon: SvgPicture.asset(
+              pathWindowIcon,
+              color: colorPrimary,
+            ),
           ),
           TabItem(
-            icon: SvgPicture.asset(pathShoesIcon, color: colorDisableIcon),
-            activeIcon: SvgPicture.asset(pathShoesIcon, color: colorPrimary),
+            icon: SvgPicture.asset(
+              pathShoesIcon,
+              color: colorDisableIcon,
+              height: 30,
+              width: 30,
+            ),
+            activeIcon: SvgPicture.asset(
+              pathShoesIcon,
+              color: colorPrimary,
+            ),
           ),
           TabItem(
-            icon: SvgPicture.asset(pathAddIcon, color: colorDisableIcon),
-            activeIcon: SvgPicture.asset(pathAddIcon, color: colorPrimary),
+            icon: SvgPicture.asset(
+              pathAddIcon,
+              color: colorTextWhite,
+              height: 22,
+              width: 22,
+            ),
+            activeIcon: SvgPicture.asset(
+              pathAddIcon,
+              color: colorTextWhite,
+            ),
           ),
           TabItem(
-            icon: SvgPicture.asset(pathFavoriteIcon, color: colorDisableIcon),
-            activeIcon: SvgPicture.asset(pathFavoriteIcon, color: colorPrimary),
+            icon: SvgPicture.asset(
+              pathFavoriteIcon,
+              color: colorDisableIcon,
+              height: 22,
+              width: 22,
+            ),
+            activeIcon: SvgPicture.asset(
+              pathFavoriteIcon,
+              color: colorPrimary,
+            ),
           ),
           TabItem(
-            icon: SvgPicture.asset(pathSettingsIcon, color: colorDisableIcon),
-            activeIcon: SvgPicture.asset(pathSettingsIcon, color: colorPrimary),
+            icon: SvgPicture.asset(
+              pathSettingsIcon,
+              color: colorDisableIcon,
+              height: 22,
+              width: 22,
+            ),
+            activeIcon: SvgPicture.asset(
+              pathSettingsIcon,
+              color: colorPrimary,
+            ),
           ),
         ],
         onTap: (int index) {

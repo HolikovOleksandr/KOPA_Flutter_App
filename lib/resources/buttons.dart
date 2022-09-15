@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 // Enter button
 class EnterButtonWidget extends StatelessWidget {
   final Callback onTap;
+
   const EnterButtonWidget({
     Key? key,
     required this.onTap,
@@ -18,9 +19,7 @@ class EnterButtonWidget extends StatelessWidget {
     return Stack(
       alignment: AlignmentDirectional.center,
       children: [
-        Image.asset(
-          pathCurveButton,
-        ),
+        Image.asset(pathCurveButton),
         TextButton(
           onPressed: onTap,
           child: Text(
@@ -56,10 +55,7 @@ class LongBlueButtonWidget extends StatelessWidget {
           ),
         ),
         onPressed: onPressed,
-        child: Text(
-          style: fontSize16,
-          text,
-        ),
+        child: Text(text, style: fontSize16),
       ),
     );
   }
@@ -78,6 +74,24 @@ class RegisterButonWidget extends StatelessWidget {
     required this.color,
   }) : super(key: key);
 
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: _buttonRegisterStyle(color),
+      height: MediaQuery.of(context).size.height * 0.17,
+      width: MediaQuery.of(context).size.width * 0.17,
+      child: GestureDetector(
+        onTap: onTap,
+        child: SvgPicture.asset(
+          svgPath,
+          fit: BoxFit.scaleDown,
+          height: 25,
+          width: 25,
+        ),
+      ),
+    );
+  }
+
   _buttonRegisterStyle(Color color) {
     return BoxDecoration(
       shape: BoxShape.circle,
@@ -89,24 +103,6 @@ class RegisterButonWidget extends StatelessWidget {
           color: color,
         ),
       ],
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: _buttonRegisterStyle(color),
-      height: 70,
-      width: 70,
-      child: GestureDetector(
-        onTap: onTap,
-        child: SvgPicture.asset(
-          fit: BoxFit.scaleDown,
-          height: 25,
-          width: 25,
-          svgPath,
-        ),
-      ),
     );
   }
 }

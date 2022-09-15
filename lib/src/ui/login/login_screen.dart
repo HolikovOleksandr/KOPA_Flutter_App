@@ -16,60 +16,67 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: colorBackground,
-      body: Center(
-        child: Column(
-          children: [
-            Align(
-              alignment: Alignment.topRight,
-              child: Image.asset(
-                pathSmallTriangle,
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: colorBackground,
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Align(
+                alignment: Alignment.topRight,
+                child: Image.asset(pathSmallTriangle),
               ),
-            ),
-            const SizedBox(
-              height: 95,
-            ),
-            Container(
-              height: 420,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                    pathSplashScreen,
-                  ),
-                  scale: 0.9,
-                ),
-              ),
-            ),
-            EnterButtonWidget(
-              onTap: () => Get.to(() => const HomeScreen()),
-            ),
-            const SizedBox(height: 40),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 45),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              Row(
                 children: [
-                  RegisterButonWidget(
-                    svgPath: pathPhoneIcon,
-                    color: colorRegisterButtonPhone,
-                    onTap: () => Get.to(() => const PhoneAuthScreen()),
-                  ),
-                  RegisterButonWidget(
-                    svgPath: pathFacebookIcon,
-                    color: colorRegisterButtonFacebook,
-                    onTap: () {},
-                  ),
-                  RegisterButonWidget(
-                    svgPath: pathGoogleIcon,
-                    color: colorRegisterButtonGoogle,
-                    onTap: () {},
+                  const SizedBox(width: 20),
+                  IconButton(
+                    onPressed: () async {},
+                    icon: const Icon(
+                      Icons.language,
+                      color: colorTextWhite,
+                      size: 30,
+                    ),
                   ),
                 ],
               ),
-            ),
-            const SizedBox(height: 50),
-          ],
+              Container(
+                height: MediaQuery.of(context).size.height * 0.5,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(pathSplashScreen),
+                    scale: 0.9,
+                  ),
+                ),
+              ),
+              EnterButtonWidget(
+                onTap: () => Get.to(() => const HomeScreen()),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 45),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    RegisterButonWidget(
+                      svgPath: pathPhoneIcon,
+                      color: colorRegisterButtonPhone,
+                      onTap: () => Get.to(() => const PhoneAuthScreen()),
+                    ),
+                    RegisterButonWidget(
+                      svgPath: pathFacebookIcon,
+                      color: colorRegisterButtonFacebook,
+                      onTap: () {},
+                    ),
+                    RegisterButonWidget(
+                      svgPath: pathGoogleIcon,
+                      color: colorRegisterButtonGoogle,
+                      onTap: () {},
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

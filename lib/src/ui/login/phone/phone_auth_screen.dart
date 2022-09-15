@@ -34,7 +34,10 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
           children: [
             Align(
               alignment: Alignment.topRight,
-              child: Image.asset(pathSmallTriangle),
+              child: Image.asset(
+                pathSmallTriangle,
+                color: Colors.white,
+              ),
             ),
             const SizedBox(height: 60),
             Container(
@@ -48,14 +51,14 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
             ),
             EnterButtonWidget(onTap: () => Get.to(() => const HomeScreen())),
             const SizedBox(height: 40),
-            CustomInputFieldWidget(
-              controller: otpVisibility ? otpController : phoneController,
-              obscure: otpVisibility ? true : false,
-              prefix: otpVisibility ? "" : "+38",
+            CustomeTextField(
+              controller: phoneController,
+              obscure: false,
+              prefix: "+38",
             ),
             LongBlueButtonWidget(
-              onPressed: otpVisibility ? verifyOTP : loginWithPhone,
-              text: otpVisibility ? "Далi" : "Верифiкувати",
+              onPressed: loginWithPhone,
+              text: "Верифiкувати",
             ),
           ],
         ),
