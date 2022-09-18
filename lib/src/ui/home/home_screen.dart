@@ -41,61 +41,61 @@ class _HomeScreenState extends State<HomeScreen> {
         items: [
           TabItem(
             icon: SvgPicture.asset(
-              pathWindowIcon,
+              pathIconWindow,
               color: colorDisableIcon,
               height: 22,
               width: 22,
             ),
             activeIcon: SvgPicture.asset(
-              pathWindowIcon,
+              pathIconWindow,
               color: colorPrimary,
             ),
           ),
           TabItem(
             icon: SvgPicture.asset(
-              pathShoesIcon,
+              pathIconShoes,
               color: colorDisableIcon,
               height: 30,
               width: 30,
             ),
             activeIcon: SvgPicture.asset(
-              pathShoesIcon,
+              pathIconShoes,
               color: colorPrimary,
             ),
           ),
           TabItem(
             icon: SvgPicture.asset(
-              pathAddIcon,
+              pathIconAdd,
               color: colorTextWhite,
               height: 22,
               width: 22,
             ),
             activeIcon: SvgPicture.asset(
-              pathAddIcon,
+              pathIconAdd,
               color: colorTextWhite,
             ),
           ),
           TabItem(
             icon: SvgPicture.asset(
-              pathFavoriteIcon,
+              pathIconFavorite,
               color: colorDisableIcon,
               height: 22,
               width: 22,
             ),
             activeIcon: SvgPicture.asset(
-              pathFavoriteIcon,
+              pathIconFavorite,
               color: colorPrimary,
             ),
           ),
           TabItem(
             icon: SvgPicture.asset(
-              pathSettingsIcon,
+              pathIconSettings,
               color: colorDisableIcon,
               height: 22,
               width: 22,
             ),
             activeIcon: SvgPicture.asset(
-              pathSettingsIcon,
+              pathIconSettings,
               color: colorPrimary,
             ),
           ),

@@ -29,7 +29,7 @@ class UnknownPage extends StatelessWidget {
             Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(pathSplashScreen),
+                  image: AssetImage(pahtImageSneaker),
                   scale: 0.9,
                 ),
               ),

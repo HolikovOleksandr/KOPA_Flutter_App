@@ -1,14 +1,17 @@
-const String pathSmallTriangle = 'assets/images/small_triangle.png';
-const String pahtSimpsonMouth = 'assets/images/simpson_mouth.png';
-const String pathCurveButton = 'assets/images/curve_button.png';
-const String pathFacebookIcon = 'assets/images/facebook.svg';
-const String pathFavoriteIcon = 'assets/images/favorite.svg';
-const String pathSettingsIcon = 'assets/images/settings.svg';
-const String pathSplashScreen = 'assets/images/splash.png';
-const String pathGoogleIcon = 'assets/images/google.svg';
-const String pathWindowIcon = 'assets/images/window.svg';
-const String pathPhoneIcon = 'assets/images/phone.svg';
-const String pathSoartIcon = 'assets/images/soart.svg';
-const String pathShoesIcon = 'assets/images/shoes.svg';
-const String pathSneaker = 'assets/images/sneaker.png';
-const String pathAddIcon = 'assets/images/add.svg';
+// SVG
+const String pathIconFacebook = 'assets/vector/facebook.svg';
+const String pathIconFavorite = 'assets/vector/favorite.svg';
+const String pathIconSettings = 'assets/vector/settings.svg';
+const String pathIconGoogle = 'assets/vector/google.svg';
+const String pathIconWindow = 'assets/vector/window.svg';
+const String pathIconPhone = 'assets/vector/phone.svg';
+const String pathIconSoart = 'assets/vector/soart.svg';
+const String pathIconShoes = 'assets/vector/shoes.svg';
+const String pathIconAdd = 'assets/vector/add.svg';
+
+//PNG
+const String pahtImageSimpsonMouth = 'assets/1x/simpson_mouth.png';
+const String pathImageEnterButton = 'assets/1x/enter_button.png';
+const String pahtImageUserAvatar = 'assets/1x/user_avatar.png';
+const String pathImageProduct = 'assets/1x/product_image.png';
+const String pahtImageSneaker = 'assets/1x/sneaker_img.png';

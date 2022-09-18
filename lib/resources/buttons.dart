@@ -19,7 +19,7 @@ class EnterButtonWidget extends StatelessWidget {
     return Stack(
       alignment: AlignmentDirectional.center,
       children: [
-        Image.asset(pathCurveButton),
+        Image.asset(pathImageEnterButton),
         TextButton(
           onPressed: onTap,
           child: Text(

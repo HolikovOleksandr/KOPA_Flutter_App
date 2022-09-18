@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
                       const SizedBox(height: 80),
                       SvgPicture.asset(
                         fit: BoxFit.scaleDown,
-                        pathSoartIcon,
+                        pathIconSoart,
                         height: 20,
                         width: 20,
                       ),
@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              Image.asset(pahtSimpsonMouth),
+              Image.asset(pahtImageSimpsonMouth),
             ],
           ),
           Expanded(

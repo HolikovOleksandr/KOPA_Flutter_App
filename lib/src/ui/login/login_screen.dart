@@ -22,10 +22,6 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Align(
-                alignment: Alignment.topRight,
-                child: Image.asset(pathSmallTriangle),
-              ),
               Row(
                 children: [
                   const SizedBox(width: 20),
@@ -43,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: MediaQuery.of(context).size.height * 0.5,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(pathSplashScreen),
+                    image: AssetImage(pahtImageSneaker),
                     scale: 0.9,
                   ),
                 ),
@@ -59,19 +55,19 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     RegisterButonWidget(
-                      svgPath: pathPhoneIcon,
+                      svgPath: pathIconPhone,
                       color: colorRegisterButtonPhone,
                       onTap: () {
                         Get.toNamed(routePhoneAuthScreen);
                       },
                     ),
                     RegisterButonWidget(
-                      svgPath: pathFacebookIcon,
+                      svgPath: pathIconFacebook,
                       color: colorRegisterButtonFacebook,
                       onTap: () {},
                     ),
                     RegisterButonWidget(
-                      svgPath: pathGoogleIcon,
+                      svgPath: pathIconGoogle,
                       color: colorRegisterButtonGoogle,
                       onTap: () {},
                     ),

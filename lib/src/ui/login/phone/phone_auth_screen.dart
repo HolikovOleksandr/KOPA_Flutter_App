@@ -31,19 +31,12 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Align(
-              alignment: Alignment.topRight,
-              child: Image.asset(
-                pathSmallTriangle,
-                color: Colors.white,
-              ),
-            ),
             const SizedBox(height: 60),
             Container(
               height: 410,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(pathSplashScreen),
+                  image: AssetImage(pahtImageSneaker),
                   scale: 0.9,
                 ),
               ),
