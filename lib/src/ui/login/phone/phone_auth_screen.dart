@@ -1,14 +1,13 @@
 // ignore_for_file: avoid_print
 
 import 'package:kopa/resources/custome_text_field.dart';
-import 'package:kopa/src/ui/home/home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:kopa/router/route_pathes.dart';
 import 'package:kopa/resources/buttons.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class PhoneAuthScreen extends StatefulWidget {
   const PhoneAuthScreen({Key? key}) : super(key: key);
@@ -49,16 +48,21 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
                 ),
               ),
             ),
-            EnterButtonWidget(onTap: () => Get.to(() => const HomeScreen())),
+            EnterButtonWidget(onTap: () => routeHomeScreen),
             const SizedBox(height: 40),
-            CustomeTextField(
-              controller: phoneController,
-              obscure: false,
-              prefix: "+38",
-            ),
-            LongBlueButtonWidget(
-              onPressed: loginWithPhone,
-              text: "Верифiкувати",
+            Column(
+              //TODO: Add Visible vidget and create switch on OTP verefy column
+              children: [
+                CustomeTextField(
+                  controller: phoneController,
+                  obscure: false,
+                  hint: "+38",
+                ),
+                LongBlueButtonWidget(
+                  onPressed: loginWithPhone,
+                  text: "Верифiкувати",
+                ),
+              ],
             ),
           ],
         ),
@@ -108,7 +112,7 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
     ).whenComplete(
       () {
         if (user != null) {
-          Get.to(() => const HomeScreen());
+          () => routeHomeScreen;
         } else {
           Fluttertoast.showToast(
             msg: "Помилка",

@@ -1,10 +1,9 @@
-import 'package:kopa/src/ui/login/phone/phone_auth_screen.dart';
-import 'package:kopa/src/ui/home/home_screen.dart';
+import 'package:get/get.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/resources/buttons.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:kopa/router/route_pathes.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -31,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   const SizedBox(width: 20),
                   IconButton(
-                    onPressed: () async {},
+                    onPressed: () {},
                     icon: const Icon(
                       Icons.language,
                       color: colorTextWhite,
@@ -50,7 +49,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               EnterButtonWidget(
-                onTap: () => Get.to(() => const HomeScreen()),
+                onTap: () {
+                  Get.toNamed(routeHomeScreen);
+                },
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 45),
@@ -60,7 +61,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     RegisterButonWidget(
                       svgPath: pathPhoneIcon,
                       color: colorRegisterButtonPhone,
-                      onTap: () => Get.to(() => const PhoneAuthScreen()),
+                      onTap: () {
+                        Get.toNamed(routePhoneAuthScreen);
+                      },
                     ),
                     RegisterButonWidget(
                       svgPath: pathFacebookIcon,

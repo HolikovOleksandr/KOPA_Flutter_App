@@ -1,5 +1,5 @@
-import 'package:kopa/src/ui/splah/animated_splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:kopa/router/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,9 +14,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AnimatedSplashScreenWidget(),
+      unknownRoute: unknownRoute,
+      initialRoute: rootRoute,
+      navigatorKey: Get.key,
+      getPages: routes,
     );
   }
 }

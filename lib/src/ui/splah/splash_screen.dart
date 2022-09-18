@@ -4,8 +4,8 @@ import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:flutter/material.dart';
 
-class AnimatedSplashScreenWidget extends StatelessWidget {
-  const AnimatedSplashScreenWidget({Key? key}) : super(key: key);
+class SplashScreen extends StatelessWidget {
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
