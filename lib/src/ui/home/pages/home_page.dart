@@ -1,4 +1,4 @@
-import 'package:kopa/resources/product_card.dart';
+import 'package:kopa/src/ui_widgets/product_card.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_svg/flutter_svg.dart';

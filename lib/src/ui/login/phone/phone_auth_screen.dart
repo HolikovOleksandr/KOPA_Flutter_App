@@ -1,11 +1,11 @@
 // ignore_for_file: avoid_print
 
-import 'package:kopa/resources/custome_text_field.dart';
+import 'package:kopa/src/ui_widgets/custome_text_field.dart';
+import 'package:kopa/src/ui_widgets/buttons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:kopa/router/route_pathes.dart';
-import 'package:kopa/resources/buttons.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +33,7 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
           children: [
             const SizedBox(height: 60),
             Container(
-              height: 410,
+              height: MediaQuery.of(context).size.height / 2,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(pahtImageSneaker),
