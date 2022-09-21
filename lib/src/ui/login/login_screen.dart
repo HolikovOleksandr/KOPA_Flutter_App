@@ -1,9 +1,9 @@
-import 'package:get/get.dart';
+import 'package:kopa/src/ui_widgets/buttons.dart';
 import 'package:kopa/resources/asset_pathes.dart';
+import 'package:kopa/router/route_pathes.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:kopa/router/route_pathes.dart';
-import 'package:kopa/src/ui_widgets/buttons.dart';
+import 'package:get/get.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -15,67 +15,47 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: colorBackground,
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
+    return Scaffold(
+      backgroundColor: AppColors.background,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Container(
+              height: MediaQuery.of(context).size.height * 0.5,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(AppImages.sneaker),
+                  scale: 0.9,
+                ),
+              ),
+            ),
+            const SizedBox(height: 40),
+            EnterButtonWidget(onTap: () => Get.toNamed(AppRouter.homeScreen)),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(40, 0, 40, 50),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const SizedBox(width: 20),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.language,
-                      color: colorTextWhite,
-                      size: 30,
-                    ),
+                  RegisterButonWidget(
+                    svgPath: AppIcons.phone,
+                    color: AppColors.registerButtonPhone,
+                    onTap: () => Get.toNamed(AppRouter.phoneAuthScreen),
+                  ),
+                  RegisterButonWidget(
+                    svgPath: AppIcons.facebook,
+                    color: AppColors.registerButtonFacebook,
+                    onTap: () {},
+                  ),
+                  RegisterButonWidget(
+                    svgPath: AppIcons.google,
+                    color: AppColors.registerButtonGoogle,
+                    onTap: () {},
                   ),
                 ],
               ),
-              Container(
-                height: MediaQuery.of(context).size.height * 0.5,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(pahtImageSneaker),
-                    scale: 0.9,
-                  ),
-                ),
-              ),
-              EnterButtonWidget(
-                onTap: () {
-                  Get.toNamed(routeHomeScreen);
-                },
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 45),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    RegisterButonWidget(
-                      svgPath: pathIconPhone,
-                      color: colorRegisterButtonPhone,
-                      onTap: () {
-                        Get.toNamed(routePhoneAuthScreen);
-                      },
-                    ),
-                    RegisterButonWidget(
-                      svgPath: pathIconFacebook,
-                      color: colorRegisterButtonFacebook,
-                      onTap: () {},
-                    ),
-                    RegisterButonWidget(
-                      svgPath: pathIconGoogle,
-                      color: colorRegisterButtonGoogle,
-                      onTap: () {},
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

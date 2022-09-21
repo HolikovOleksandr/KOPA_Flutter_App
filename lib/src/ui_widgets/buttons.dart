@@ -1,6 +1,7 @@
 import 'package:get/get_rx/src/rx_typedefs/rx_typedefs.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kopa/resources/strings.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';
@@ -9,22 +10,21 @@ import 'package:flutter/material.dart';
 class EnterButtonWidget extends StatelessWidget {
   final Callback onTap;
 
-  const EnterButtonWidget({
-    Key? key,
-    required this.onTap,
-  }) : super(key: key);
+  const EnterButtonWidget({Key? key, required this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       alignment: AlignmentDirectional.center,
       children: [
-        Image.asset(pathImageEnterButton),
+        Image.asset(AppImages.enterButton),
         TextButton(
           onPressed: onTap,
           child: Text(
-            'Вхiд',
-            style: fontSize26.copyWith(color: colorTextWhite),
+            AppText.enterButton,
+            style: AppFonts.size26.copyWith(
+              color: AppColors.textWhite,
+            ),
           ),
         ),
       ],
@@ -45,17 +45,22 @@ class LongBlueButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 45),
+      padding: const EdgeInsets.symmetric(horizontal: 40),
       child: ElevatedButton(
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           minimumSize: const Size.fromHeight(45),
-          primary: colorPrimary,
+          primary: AppColors.primary,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),
           ),
         ),
-        onPressed: onPressed,
-        child: Text(text, style: fontSize16),
+        child: Text(
+          text,
+          style: AppFonts.size16.copyWith(
+            color: AppColors.textWhite,
+          ),
+        ),
       ),
     );
   }

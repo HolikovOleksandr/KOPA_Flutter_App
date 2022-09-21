@@ -13,12 +13,12 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colorBackground,
+      backgroundColor: AppColors.background,
       body: Center(
         child: Text(
           'Profile page',
-          style: fontSize26.copyWith(
-            color: colorPrimary,
+          style: AppFonts.size26.copyWith(
+            color: AppColors.primary,
           ),
         ),
       ),

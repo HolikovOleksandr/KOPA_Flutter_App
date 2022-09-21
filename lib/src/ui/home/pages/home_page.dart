@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colorBackground,
+      backgroundColor: AppColors.background,
       body: Column(
         children: [
           Row(
@@ -34,8 +34,8 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       const SizedBox(height: 80),
                       SvgPicture.asset(
+                        AppIcons.soart,
                         fit: BoxFit.scaleDown,
-                        pathIconSoart,
                         height: 20,
                         width: 20,
                       ),
@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              Image.asset(pahtImageSimpsonMouth),
+              Image.asset(AppImages.simpsonMouth),
             ],
           ),
           Expanded(
