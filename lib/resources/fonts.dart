@@ -1,31 +1,33 @@
 import 'package:flutter/material.dart';
 
-const fontSize26 = TextStyle(
-  fontFamily: 'Poppins',
-  fontWeight: FontWeight.w400,
-  fontSize: 28,
-);
+class AppFonts {
+  static const size26 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Poppins',
+    fontSize: 28,
+  );
 
-const fontSize22 = TextStyle(
-  fontFamily: 'Poppins',
-  fontWeight: FontWeight.w400,
-  fontSize: 22,
-);
+  static const size22 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Poppins',
+    fontSize: 22,
+  );
 
-const fontSize16 = TextStyle(
-  fontFamily: 'Poppins',
-  fontSize: 16,
-  fontWeight: FontWeight.w400,
-);
+  static const size16 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Poppins',
+    fontSize: 16,
+  );
 
-const fontSize14 = TextStyle(
-  fontFamily: 'Poppins',
-  fontWeight: FontWeight.w400,
-  fontSize: 14,
-);
+  static const size14 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Poppins',
+    fontSize: 14,
+  );
 
-const fontSize10 = TextStyle(
-  fontFamily: 'Poppins',
-  fontWeight: FontWeight.w400,
-  fontSize: 10,
-);
+  static const size10 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Poppins',
+    fontSize: 10,
+  );
+}

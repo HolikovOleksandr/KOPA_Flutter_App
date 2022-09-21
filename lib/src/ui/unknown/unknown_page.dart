@@ -1,8 +1,9 @@
 import 'package:kopa/resources/asset_pathes.dart';
+import 'package:kopa/resources/strings.dart';
 import 'package:kopa/resources/colors.dart';
+import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:kopa/resources/fonts.dart';
 
 class UnknownPage extends StatelessWidget {
   const UnknownPage({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class UnknownPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colorBackground,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         leading: IconButton(
           onPressed: Get.back,
@@ -23,13 +24,15 @@ class UnknownPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              'Невідома сторінка',
-              style: fontSize22.copyWith(color: colorErrorInput),
+              AppText.unknownPage,
+              style: AppFonts.size22.copyWith(
+                color: AppColors.errorInput,
+              ),
             ),
             Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(pahtImageSneaker),
+                  image: AssetImage(AppImages.sneaker),
                   scale: 0.9,
                 ),
               ),

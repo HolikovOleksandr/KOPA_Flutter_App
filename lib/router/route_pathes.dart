@@ -1,5 +1,7 @@
-const String routePhoneAuthScreen = "/phoneAuth";
-const String unknownPageScreen = "/notFound";
-const String routeLoginScreen = "/login";
-const String routeHomeScreen = "/home";
-const String routeSplashScreen = "/";
+class AppRouter {
+  static const String phoneAuthScreen = "/phoneAuth";
+  static const String unknownScreen = "/notFound";
+  static const String loginScreen = "/login";
+  static const String homeScreen = "/home";
+  static const String splashScreen = "/";
+}

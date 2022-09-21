@@ -29,74 +29,73 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colorBackground,
+      backgroundColor: AppColors.background,
       body: _pageOption[selectedPage],
       bottomNavigationBar: ConvexAppBar(
         style: TabStyle.fixedCircle,
-        activeColor: colorPrimary,
+        activeColor: AppColors.primary,
         initialActiveIndex: selectedPage,
-        backgroundColor: colorNavBarBg,
+        backgroundColor: AppColors.navBarBg,
         height: MediaQuery.of(context).size.height * 0.09,
-        //TODO: Fix icon`s size
         items: [
           TabItem(
             icon: SvgPicture.asset(
-              pathIconWindow,
-              color: colorDisableIcon,
+              AppIcons.window,
+              color: AppColors.disableIcon,
               height: 22,
               width: 22,
             ),
             activeIcon: SvgPicture.asset(
-              pathIconWindow,
-              color: colorPrimary,
+              AppIcons.window,
+              color: AppColors.primary,
             ),
           ),
           TabItem(
             icon: SvgPicture.asset(
-              pathIconShoes,
-              color: colorDisableIcon,
+              AppIcons.shoes,
+              color: AppColors.disableIcon,
               height: 30,
               width: 30,
             ),
             activeIcon: SvgPicture.asset(
-              pathIconShoes,
-              color: colorPrimary,
+              AppIcons.shoes,
+              color: AppColors.primary,
             ),
           ),
           TabItem(
             icon: SvgPicture.asset(
-              pathIconAdd,
-              color: colorTextWhite,
+              AppIcons.add,
+              color: AppColors.textWhite,
               height: 22,
               width: 22,
             ),
             activeIcon: SvgPicture.asset(
-              pathIconAdd,
-              color: colorTextWhite,
+              AppIcons.add,
+              color: AppColors.textWhite,
             ),
           ),
           TabItem(
             icon: SvgPicture.asset(
-              pathIconFavorite,
-              color: colorDisableIcon,
+              AppIcons.favorite,
+              color: AppColors.disableIcon,
               height: 22,
               width: 22,
             ),
             activeIcon: SvgPicture.asset(
-              pathIconFavorite,
-              color: colorPrimary,
+              AppIcons.favorite,
+              color: AppColors.primary,
             ),
           ),
           TabItem(
             icon: SvgPicture.asset(
-              pathIconSettings,
-              color: colorDisableIcon,
+              AppIcons.settings,
+              color: AppColors.disableIcon,
               height: 22,
               width: 22,
             ),
             activeIcon: SvgPicture.asset(
-              pathIconSettings,
-              color: colorPrimary,
+              AppIcons.settings,
+              color: AppColors.primary,
             ),
           ),
         ],

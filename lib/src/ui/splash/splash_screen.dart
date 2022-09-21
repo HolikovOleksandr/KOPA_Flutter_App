@@ -10,13 +10,13 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
-      backgroundColor: colorBackground,
+      backgroundColor: AppColors.background,
       splashIconSize: double.infinity,
       nextScreen: const LoginScreen(),
       splash: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(pahtImageSneaker),
+            image: AssetImage(AppImages.sneaker),
             scale: 0.9,
           ),
         ),

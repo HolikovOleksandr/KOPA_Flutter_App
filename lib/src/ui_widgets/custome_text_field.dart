@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 
 class CustomeTextField extends StatefulWidget {
   final TextEditingController controller;
-  final String hint;
   final bool obscure;
+  final String hint;
 
   const CustomeTextField({
     Key? key,
     required this.controller,
-    required this.hint,
     required this.obscure,
+    required this.hint,
   }) : super(key: key);
 
   @override
@@ -19,59 +19,57 @@ class CustomeTextField extends StatefulWidget {
 }
 
 class _CustomeTextFieldState extends State<CustomeTextField> {
-  final controller = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 45),
+      padding: const EdgeInsets.symmetric(horizontal: 40),
+      //TODO: Fix text field`s heght
       child: TextField(
-        keyboardType: TextInputType.phone,
-        controller: controller,
-        style: fontSize14.copyWith(color: colorTextWhite),
+        controller: widget.controller,
         obscureText: widget.obscure,
         maxLength: 10,
+        keyboardType: TextInputType.phone,
+        style: AppFonts.size14.copyWith(
+          color: AppColors.textWhite,
+        ),
         decoration: InputDecoration(
-          helperText: widget.hint,
-          counterStyle: fontSize10.copyWith(
-            color: colorBackground,
+          prefixText: widget.hint,
+          labelText: widget.hint,
+          contentPadding: const EdgeInsets.only(left: 10),
+          prefixStyle: AppFonts.size14.copyWith(
+            color: AppColors.textWhite,
           ),
-          prefixStyle: fontSize14.copyWith(
-            color: colorTextWhite,
+          alignLabelWithHint: true,
+          floatingLabelBehavior: FloatingLabelBehavior.never,
+          labelStyle: AppFonts.size14.copyWith(
+            color: AppColors.textWhite,
           ),
-          hintStyle: fontSize14.copyWith(
-            color: colorTextWhite,
+          counterStyle: AppFonts.size10.copyWith(
+            color: AppColors.background,
           ),
-          //
-          //Error text
-          // errorText: 'Номер введено невiрно',
-          // errorStyle: fontSize10,
-          // contentPadding: const EdgeInsets.only(left: 10),
-
-          // Focus
+          // Focus border
           focusedBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(50)),
             borderSide: BorderSide(
-              color: colorPrimary,
+              color: AppColors.primary,
               width: 2,
             ),
           ),
-          // Enable
+          // Enable border
           enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(50)),
             borderSide: BorderSide(
-              color: colorInput,
+              color: AppColors.input,
               width: 2,
             ),
           ),
-          // Error
-          errorBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(50)),
-            borderSide: BorderSide(
-              color: colorErrorInput,
-              width: 2,
-            ),
-          ),
+          // // Error border
+          // errorText: AppText.errorText,
+          // errorStyle: AppFonts.size10.copyWith(color: AppColors.errorInput),
+          // errorBorder: const OutlineInputBorder(
+          //   borderRadius: BorderRadius.all(Radius.circular(50)),
+          //   borderSide: BorderSide(color: AppColors.errorInput, width: 2),
+          // ),
         ),
       ),
     );

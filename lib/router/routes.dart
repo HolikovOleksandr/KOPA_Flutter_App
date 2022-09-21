@@ -8,26 +8,26 @@ import 'package:get/get.dart';
 
 final routes = [
   GetPage(
-    name: routeSplashScreen,
+    name: AppRouter.splashScreen,
     page: () => const SplashScreen(),
   ),
   GetPage(
-    name: routeLoginScreen,
+    name: AppRouter.loginScreen,
     page: () => const LoginScreen(),
   ),
   GetPage(
-    name: routePhoneAuthScreen,
+    name: AppRouter.phoneAuthScreen,
     page: () => const PhoneAuthScreen(),
   ),
   GetPage(
-    name: routeHomeScreen,
+    name: AppRouter.homeScreen,
     page: () => const HomeScreen(),
   ),
 ];
 
-const String rootRoute = routeSplashScreen;
+const String rootRoute = AppRouter.splashScreen;
 
 final unknownRoute = GetPage(
-  name: unknownPageScreen,
+  name: AppRouter.unknownScreen,
   page: () => const UnknownPage(),
 );
