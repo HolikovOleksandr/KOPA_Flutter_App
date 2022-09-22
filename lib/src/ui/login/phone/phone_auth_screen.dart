@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_print
-
 import 'package:kopa/src/ui_widgets/custome_text_field.dart';
 import 'package:kopa/src/ui_widgets/buttons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -35,7 +33,7 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
           children: [
             const SizedBox(height: 60),
             Container(
-              height: MediaQuery.of(context).size.height / 2,
+              height: Get.height / 2,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(AppImages.sneaker),
@@ -46,16 +44,17 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
             EnterButtonWidget(onTap: () => Get.toNamed(AppRouter.homeScreen)),
             const SizedBox(height: 40),
             Column(
-              //TODO: Add Visible vidget and create switch on OTP verefy column
+              // Create switch phone verify on OTP verefy logic
               children: [
                 CustomeTextField(
-                  controller: phoneController,
-                  obscure: false,
-                  hint: AppText.phoneHint,
+                  controller: otpVerifyActive ? otpController : phoneController,
+                  obscure: otpVerifyActive ? true : false,
+                  hint: otpVerifyActive ? null : AppText.phoneHint,
                 ),
                 LongBlueButtonWidget(
-                  onPressed: loginWithPhone,
-                  text: AppText.verifyButton,
+                  onPressed: otpVerifyActive ? verifyOTP : loginWithPhone,
+                  text:
+                      otpVerifyActive ? AppText.otpButton : AppText.phoneButton,
                 ),
               ],
             ),
@@ -71,24 +70,15 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
       phoneNumber: AppText.phoneHint + phoneController.text,
       verificationCompleted: (PhoneAuthCredential credential) async {
         await auth.signInWithCredential(credential).then((value) {
-          Fluttertoast.showToast(
-            msg: AppText.successfulToast,
-            toastLength: Toast.LENGTH_SHORT,
-            gravity: ToastGravity.BOTTOM,
-            timeInSecForIosWeb: 2,
-            backgroundColor: AppColors.background,
-            textColor: AppColors.textWhite,
-            fontSize: 14.0,
-          );
+          showMessage(AppText.successfulToast);
         });
       },
-      verificationFailed: (FirebaseAuthException e) {
-        print(e.message);
+      verificationFailed: (FirebaseAuthException exception) {
+        showMessage(exception.message);
       },
       codeSent: (String verificationId, [int? resendToken]) {
         otpVerifyActive = true;
         verificationID = verificationId;
-        setState(() {});
       },
       codeAutoRetrievalTimeout: (String verificationId) {},
     );
@@ -100,7 +90,7 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
 
     await auth.signInWithCredential(credential).then(
       (value) {
-        setState(() {
+        Get.to(() {
           user = FirebaseAuth.instance.currentUser;
         });
       },
@@ -109,17 +99,21 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
         if (user != null) {
           () => Get.toNamed(AppRouter.homeScreen);
         } else {
-          Fluttertoast.showToast(
-            msg: AppText.failedToast,
-            toastLength: Toast.LENGTH_SHORT,
-            gravity: ToastGravity.BOTTOM,
-            timeInSecForIosWeb: 2,
-            backgroundColor: AppColors.background,
-            textColor: AppColors.textWhite,
-            fontSize: 14.0,
-          );
+          showMessage(AppText.errorText);
         }
       },
     );
   }
+}
+
+showMessage(var text) {
+  return Fluttertoast.showToast(
+    msg: text,
+    toastLength: Toast.LENGTH_SHORT,
+    gravity: ToastGravity.BOTTOM,
+    timeInSecForIosWeb: 2,
+    backgroundColor: AppColors.background,
+    textColor: AppColors.textWhite,
+    fontSize: 14.0,
+  );
 }

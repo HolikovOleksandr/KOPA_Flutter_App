@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class CustomeTextField extends StatefulWidget {
   final TextEditingController controller;
   final bool obscure;
-  final String hint;
+  final String? hint;
 
   const CustomeTextField({
     Key? key,
