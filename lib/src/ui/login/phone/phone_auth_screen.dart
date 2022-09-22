@@ -22,7 +22,7 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
   TextEditingController phoneController = TextEditingController();
   TextEditingController otpController = TextEditingController();
   FirebaseAuth auth = FirebaseAuth.instance;
-  bool otpVisibility = false;
+  bool otpVerifyActive = false;
   String verificationID = "";
   User? user;
 
@@ -69,7 +69,6 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
   void loginWithPhone() async {
     auth.verifyPhoneNumber(
       phoneNumber: AppText.phoneHint + phoneController.text,
-      // phoneNumber: phoneController.text,
       verificationCompleted: (PhoneAuthCredential credential) async {
         await auth.signInWithCredential(credential).then((value) {
           Fluttertoast.showToast(
@@ -86,8 +85,8 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
       verificationFailed: (FirebaseAuthException e) {
         print(e.message);
       },
-      codeSent: (String verificationId, int? resendToken) {
-        otpVisibility = true;
+      codeSent: (String verificationId, [int? resendToken]) {
+        otpVerifyActive = true;
         verificationID = verificationId;
         setState(() {});
       },

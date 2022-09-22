@@ -46,22 +46,9 @@ class _HomePageState extends State<HomePage> {
               Image.asset(AppImages.simpsonMouth),
             ],
           ),
-          Expanded(
-            child: ListView(
-              // controller: ScrollController.,
-              scrollDirection: Axis.vertical,
-              children: const [
-                ProductCardWidget(),
-                ProductCardWidget(),
-                ProductCardWidget(),
-                ProductCardWidget(),
-                ProductCardWidget(),
-                ProductCardWidget(),
-                ProductCardWidget(),
-                ProductCardWidget(),
-              ],
-            ),
-          ),
+          ListView.builder(itemBuilder: (context, index) {
+            return const ProductCardWidget();
+          })
         ],
       ),
     );
