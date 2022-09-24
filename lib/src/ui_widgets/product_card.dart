@@ -1,13 +1,14 @@
+import 'package:kopa/src/core/ui/widgets/base_statless_widget.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';
 
-class ProductCardWidget extends StatelessWidget {
+class ProductCardWidget extends BaseStatelessWidget {
   const ProductCardWidget({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget getLayout(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
         color: AppColors.cardBg,

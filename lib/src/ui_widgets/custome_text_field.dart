@@ -1,11 +1,12 @@
+import 'package:kopa/src/core/ui/widgets/base_statefull_widget.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';
 
-class CustomeTextField extends StatefulWidget {
+class CustomeTextField extends BaseStatefulWidget {
   final TextEditingController controller;
   final bool obscure;
-  final String hint;
+  final String? hint;
 
   const CustomeTextField({
     Key? key,
@@ -23,7 +24,6 @@ class _CustomeTextFieldState extends State<CustomeTextField> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 40),
-      //TODO: Fix text field`s heght
       child: TextField(
         controller: widget.controller,
         obscureText: widget.obscure,
@@ -35,7 +35,7 @@ class _CustomeTextFieldState extends State<CustomeTextField> {
         decoration: InputDecoration(
           prefixText: widget.hint,
           labelText: widget.hint,
-          contentPadding: const EdgeInsets.only(left: 10),
+          contentPadding: const EdgeInsets.only(left: 30),
           prefixStyle: AppFonts.size14.copyWith(
             color: AppColors.textWhite,
           ),

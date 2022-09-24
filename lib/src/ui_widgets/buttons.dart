@@ -5,15 +5,16 @@ import 'package:kopa/resources/strings.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';
+import 'package:kopa/src/core/ui/widgets/base_statless_widget.dart';
 
 // Enter button
-class EnterButtonWidget extends StatelessWidget {
+class EnterButtonWidget extends BaseStatelessWidget {
   final Callback onTap;
 
   const EnterButtonWidget({Key? key, required this.onTap}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget getLayout(BuildContext context) {
     return Stack(
       alignment: AlignmentDirectional.center,
       children: [
@@ -33,7 +34,7 @@ class EnterButtonWidget extends StatelessWidget {
 }
 
 // Long blue button
-class LongBlueButtonWidget extends StatelessWidget {
+class LongBlueButtonWidget extends BaseStatelessWidget {
   final Callback onPressed;
   final String text;
   const LongBlueButtonWidget({
@@ -43,7 +44,7 @@ class LongBlueButtonWidget extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget getLayout(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 40),
       child: ElevatedButton(
@@ -67,7 +68,7 @@ class LongBlueButtonWidget extends StatelessWidget {
 }
 
 // Register button
-class RegisterButonWidget extends StatelessWidget {
+class RegisterButonWidget extends BaseStatelessWidget {
   final String svgPath;
   final Callback onTap;
   final Color color;
@@ -80,7 +81,7 @@ class RegisterButonWidget extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget getLayout(BuildContext context) {
     return Container(
       decoration: _buttonRegisterStyle(color),
       height: MediaQuery.of(context).size.height * 0.17,
