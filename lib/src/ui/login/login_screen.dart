@@ -1,3 +1,4 @@
+import 'package:kopa/src/core/ui/widgets/base_statefull_widget.dart';
 import 'package:kopa/src/ui_widgets/buttons.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/router/route_pathes.dart';
@@ -5,7 +6,7 @@ import 'package:kopa/resources/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends BaseStatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
   @override

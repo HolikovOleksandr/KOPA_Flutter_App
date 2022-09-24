@@ -1,12 +1,13 @@
+import 'package:kopa/src/core/ui/widgets/base_statless_widget.dart';
 import 'package:kopa/router/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class CoreApp extends StatelessWidget {
+class CoreApp extends BaseStatelessWidget {
   const CoreApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget getLayout(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       unknownRoute: unknownRoute,

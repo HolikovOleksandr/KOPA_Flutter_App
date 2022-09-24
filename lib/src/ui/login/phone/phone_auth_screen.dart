@@ -1,6 +1,6 @@
 import 'package:kopa/src/ui_widgets/custome_text_field.dart';
-import 'package:kopa/src/ui_widgets/buttons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:kopa/src/ui_widgets/buttons.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:kopa/router/route_pathes.dart';
@@ -13,10 +13,10 @@ class PhoneAuthScreen extends StatefulWidget {
   const PhoneAuthScreen({Key? key}) : super(key: key);
 
   @override
-  State<PhoneAuthScreen> createState() => _LoginScreenState();
+  State<StatefulWidget> createState() => LoginScreenState();
 }
 
-class _LoginScreenState extends State<PhoneAuthScreen> {
+class LoginScreenState extends State<PhoneAuthScreen> {
   TextEditingController phoneController = TextEditingController();
   TextEditingController otpController = TextEditingController();
   FirebaseAuth auth = FirebaseAuth.instance;
@@ -44,13 +44,13 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
             EnterButtonWidget(onTap: () => Get.toNamed(AppRouter.homeScreen)),
             const SizedBox(height: 40),
             Column(
-              // Create switch phone verify on OTP verefy logic
               children: [
                 CustomeTextField(
                   controller: otpVerifyActive ? otpController : phoneController,
                   obscure: otpVerifyActive ? true : false,
                   hint: otpVerifyActive ? null : AppText.phoneHint,
                 ),
+                const SizedBox(height: 10),
                 LongBlueButtonWidget(
                   onPressed: otpVerifyActive ? verifyOTP : loginWithPhone,
                   text:
@@ -64,7 +64,7 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
     );
   }
 
-  // TODO: Separated verify logic to onother page
+  // TODO: Separated verify logic to another page
   void loginWithPhone() async {
     auth.verifyPhoneNumber(
       phoneNumber: AppText.phoneHint + phoneController.text,
@@ -90,7 +90,7 @@ class _LoginScreenState extends State<PhoneAuthScreen> {
 
     await auth.signInWithCredential(credential).then(
       (value) {
-        Get.to(() {
+        setState(() {
           user = FirebaseAuth.instance.currentUser;
         });
       },

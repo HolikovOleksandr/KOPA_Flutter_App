@@ -1,8 +1,9 @@
+import 'package:kopa/src/core/ui/widgets/base_statefull_widget.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';
 
-class AddAdvertPage extends StatefulWidget {
+class AddAdvertPage extends BaseStatefulWidget {
   const AddAdvertPage({Key? key}) : super(key: key);
 
   @override
