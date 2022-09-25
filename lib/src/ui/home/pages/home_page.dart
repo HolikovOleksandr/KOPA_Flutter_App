@@ -1,5 +1,5 @@
 import 'package:kopa/src/core/ui/widgets/base_statefull_widget.dart';
-import 'package:kopa/src/models/product_model.dart';
+import 'package:kopa/src/core/models/product_model.dart';
 import 'package:kopa/src/ui_widgets/product_card.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -24,9 +24,7 @@ class HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: const EdgeInsets.only(
-                  left: 24.0,
-                ),
+                padding: const EdgeInsets.only(left: 24.0),
                 child: GestureDetector(
                   onTap: () {},
                   child: Column(
@@ -47,10 +45,11 @@ class HomePageState extends State<HomePage> {
           ),
           Flexible(
             child: ListView.builder(
-                itemCount: Product.products.length,
-                itemBuilder: (BuildContext context, index) {
-                  return ProductCardWidget(index: index);
-                }),
+              itemCount: Product.products.length,
+              itemBuilder: (BuildContext context, index) {
+                return ProductCardWidget(index: index);
+              },
+            ),
           )
         ],
       ),
