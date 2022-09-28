@@ -1,4 +1,4 @@
-import 'package:kopa/src/core/ui/widgets/base_statefull_widget.dart';
+import 'package:kopa/src/core/base_widgets/base_statefull_widget.dart';
 import 'package:kopa/src/core/models/product_model.dart';
 import 'package:kopa/src/ui_widgets/product_card.dart';
 import 'package:kopa/resources/asset_pathes.dart';

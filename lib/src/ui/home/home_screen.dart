@@ -1,4 +1,4 @@
-import 'package:kopa/src/core/ui/widgets/base_statefull_widget.dart';
+import 'package:kopa/src/core/base_widgets/base_statefull_widget.dart';
 import 'package:kopa/src/ui/home/pages/add_advert_page.dart';
 import 'package:kopa/src/ui/home/pages/fovorite_page.dart';
 import 'package:kopa/src/ui/home/pages/adverts_page.dart';
