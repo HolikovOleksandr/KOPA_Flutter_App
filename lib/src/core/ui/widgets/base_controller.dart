@@ -1,7 +1,8 @@
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:kopa/resources/colors.dart';
+import 'package:get/get.dart';
 
-mixin ShowMessageMixin {
+class BaseController extends GetxController {
   showMessage(var text) {
     return Fluttertoast.showToast(
       msg: text,

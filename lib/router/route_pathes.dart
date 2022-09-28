@@ -1,4 +1,5 @@
 class AppRouter {
+  static const String productDescription = "/description";
   static const String phoneAuthScreen = "/phoneAuth";
   static const String unknownScreen = "/notFound";
   static const String loginScreen = "/login";
