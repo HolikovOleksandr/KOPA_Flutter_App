@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:kopa/src/core/ui/widgets/base_controller.dart';
+import 'package:kopa/src/core/base_widgets/base_controller.dart';
 import 'package:kopa/router/route_pathes.dart';
 import 'package:kopa/resources/strings.dart';
 import 'package:flutter/material.dart';

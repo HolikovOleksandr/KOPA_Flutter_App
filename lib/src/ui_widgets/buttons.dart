@@ -5,7 +5,7 @@ import 'package:kopa/resources/strings.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';
-import 'package:kopa/src/core/ui/widgets/base_statless_widget.dart';
+import 'package:kopa/src/core/base_widgets/base_statless_widget.dart';
 
 // Enter button
 class EnterButtonWidget extends BaseStatelessWidget {

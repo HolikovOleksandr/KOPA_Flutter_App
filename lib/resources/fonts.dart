@@ -13,6 +13,18 @@ class AppFonts {
     fontSize: 22,
   );
 
+  static const size22Bold = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontFamily: 'Poppins',
+    fontSize: 22,
+  );
+
+  static const size18 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Poppins',
+    fontSize: 18,
+  );
+
   static const size16 = TextStyle(
     fontWeight: FontWeight.w400,
     fontFamily: 'Poppins',

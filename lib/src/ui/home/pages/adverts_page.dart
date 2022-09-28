@@ -1,4 +1,4 @@
-import 'package:kopa/src/core/ui/widgets/base_statefull_widget.dart';
+import 'package:kopa/src/core/base_widgets/base_statefull_widget.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';
