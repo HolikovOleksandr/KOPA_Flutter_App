@@ -5,6 +5,7 @@ class AppText {
   static const String successfulToast = "Успiх!";
   static const String failedToast = "Помилка";
   static const String enterButton = "Вхiд";
+  static const String exed = 'Вийти';
   static const String otpButton = "Далi";
   static const String phoneHint = "+38";
 
@@ -14,4 +15,9 @@ class AppText {
   static const String countrySize = 'EU';
   static const String footSizes = 'Розмiри стопи:';
   static const String material = 'Матерiал: ';
+
+  // User page strings
+  static const String location = 'Мiсто';
+  static const String phone = 'Контактний номер';
+  static const String userName = 'Парубок Mоторний';
 }
