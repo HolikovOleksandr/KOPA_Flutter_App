@@ -7,9 +7,11 @@ import 'package:kopa/router/route_pathes.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:kopa/src/core/base_widgets/base_statless_widget.dart';
+import 'package:kopa/src/core/localization/local_controller.dart';
 import 'package:kopa/src/ui_widgets/buttons.dart';
 
 class ProfilePage extends BaseStatelessWidget {
+  static final localeController = LocalController();
   const ProfilePage({Key? key}) : super(key: key);
 
   @override
@@ -28,7 +30,7 @@ class ProfilePage extends BaseStatelessWidget {
                 const UserImage(),
                 const SizedBox(width: 16),
                 Text(
-                  AppText.userName,
+                  'userName'.tr,
                   style: AppFonts.size22Bold.copyWith(
                     color: AppColors.textWhite,
                   ),
@@ -44,13 +46,20 @@ class ProfilePage extends BaseStatelessWidget {
               info: 'Вiнниця',
               title: AppText.location,
             ),
-            const SizedBox(height: 40),
+            const SizedBox(height: 44),
             LongBlueButtonWidget(
               text: AppText.exed,
               onPressed: () => Get.toNamed(AppRouter.loginScreen),
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: AppColors.primary,
+        child: const Icon(Icons.language),
+        onPressed: () {
+          localeController.buildDialog(context);
+        },
       ),
     );
   }
