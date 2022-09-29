@@ -3,7 +3,6 @@ import 'package:kopa/src/core/models/product_model.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/router/route_pathes.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:kopa/resources/strings.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';
@@ -59,8 +58,8 @@ class ProductCardWidget extends BaseStatelessWidget {
                       ),
                       const SizedBox(width: 8),
                       Text(
-                        AppText.footSizes,
-                        style: AppFonts.size10.copyWith(
+                        'footSizes'.tr,
+                        style: AppFonts.size12.copyWith(
                           color: AppColors.textWhite,
                         ),
                       ),
@@ -79,8 +78,8 @@ class ProductCardWidget extends BaseStatelessWidget {
                                 ),
                               ),
                               Text(
-                                AppText.countrySize,
-                                style: AppFonts.size10.copyWith(
+                                "countrySize".tr,
+                                style: AppFonts.size12.copyWith(
                                   color: AppColors.textWhite,
                                 ),
                               ),
@@ -97,8 +96,8 @@ class ProductCardWidget extends BaseStatelessWidget {
                                 ),
                               ),
                               Text(
-                                AppText.height,
-                                style: AppFonts.size10.copyWith(
+                                'height'.tr,
+                                style: AppFonts.size12.copyWith(
                                   color: AppColors.textWhite,
                                 ),
                               ),
@@ -115,8 +114,8 @@ class ProductCardWidget extends BaseStatelessWidget {
                                 ),
                               ),
                               Text(
-                                AppText.width,
-                                style: AppFonts.size10.copyWith(
+                                'width'.tr,
+                                style: AppFonts.size12.copyWith(
                                   color: AppColors.textWhite,
                                 ),
                               ),
@@ -125,8 +124,8 @@ class ProductCardWidget extends BaseStatelessWidget {
                         ],
                       ),
                       Text(
-                        AppText.material + Product.products[index].material,
-                        style: AppFonts.size10
+                        'material'.tr + Product.products[index].material,
+                        style: AppFonts.size12
                             .copyWith(color: AppColors.sneakerTexture),
                       ),
                       const SizedBox(width: 8),

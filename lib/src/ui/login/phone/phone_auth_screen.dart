@@ -1,14 +1,14 @@
+import 'package:kopa/src/core/base_widgets/base_statefull_widget.dart';
 import 'package:kopa/src/ui/login/phone/phone_auth_controller.dart';
 import 'package:kopa/src/ui_widgets/custome_text_field.dart';
 import 'package:kopa/src/ui_widgets/buttons.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/router/route_pathes.dart';
-import 'package:kopa/resources/strings.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class PhoneAuthScreen extends StatefulWidget {
+class PhoneAuthScreen extends BaseStatefulWidget {
   const PhoneAuthScreen({Key? key}) : super(key: key);
 
   @override
@@ -60,9 +60,8 @@ class LoginScreenState extends State<PhoneAuthScreen> {
                         ? authController.otpController
                         : authController.phoneController,
                     obscure: authController.otpVerifyActive ? true : false,
-                    hint: authController.otpVerifyActive
-                        ? null
-                        : AppText.phoneHint,
+                    hint:
+                        authController.otpVerifyActive ? null : 'phoneHint'.tr,
                   ),
                   const SizedBox(height: 10),
                   LongBlueButtonWidget(
@@ -70,8 +69,8 @@ class LoginScreenState extends State<PhoneAuthScreen> {
                         ? authController.verifyOTP
                         : authController.loginWithPhone,
                     text: authController.otpVerifyActive
-                        ? AppText.otpButton
-                        : AppText.phoneButton,
+                        ? 'otpButton'.tr
+                        : 'phoneButton'.tr,
                   ),
                 ],
               ),

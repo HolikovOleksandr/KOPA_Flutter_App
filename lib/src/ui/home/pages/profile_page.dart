@@ -2,7 +2,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/resources/fonts.dart';
-import 'package:kopa/resources/strings.dart';
 import 'package:kopa/router/route_pathes.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:flutter/material.dart';
@@ -38,17 +37,17 @@ class ProfilePage extends BaseStatelessWidget {
               ],
             ),
             const SizedBox(height: 36),
-            const UserInformationRow(
+             UserInformationRow(
               info: '+380983891691',
-              title: AppText.phone,
+              title: 'phone'.tr,
             ),
-            const UserInformationRow(
+             UserInformationRow(
               info: 'Вiнниця',
-              title: AppText.location,
+              title: 'location'.tr,
             ),
             const SizedBox(height: 44),
             LongBlueButtonWidget(
-              text: AppText.exed,
+              text: 'exed'.tr,
               onPressed: () => Get.toNamed(AppRouter.loginScreen),
             ),
           ],
