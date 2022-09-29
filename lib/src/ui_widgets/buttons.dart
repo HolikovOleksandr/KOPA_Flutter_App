@@ -1,7 +1,7 @@
+import 'package:get/get.dart';
 import 'package:get/get_rx/src/rx_typedefs/rx_typedefs.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:kopa/resources/strings.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,7 @@ class EnterButtonWidget extends BaseStatelessWidget {
         TextButton(
           onPressed: onTap,
           child: Text(
-            AppText.enterButton,
+            'enter'.tr,
             style: AppFonts.size26.copyWith(
               color: AppColors.textWhite,
             ),

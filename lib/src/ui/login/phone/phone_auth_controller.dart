@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:kopa/src/core/base_widgets/base_controller.dart';
 import 'package:kopa/router/route_pathes.dart';
-import 'package:kopa/resources/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,11 +14,13 @@ class PhoneAuthcontroller extends BaseController {
 
   Future<void> loginWithPhone() async {
     await auth.verifyPhoneNumber(
-      phoneNumber: AppText.phoneHint + phoneController.text,
+      phoneNumber: 'phoneHint'.tr + phoneController.text,
       verificationCompleted: (PhoneAuthCredential credential) async {
-        await auth.signInWithCredential(credential).then((value) {
-          showMessage(AppText.successfulToast);
-        });
+        await auth.signInWithCredential(credential).then(
+          (value) {
+            showMessage('successful'.tr);
+          },
+        );
       },
       verificationFailed: (FirebaseAuthException exception) {
         showMessage(exception.message);
@@ -47,7 +48,7 @@ class PhoneAuthcontroller extends BaseController {
         if (user != null) {
           () => Get.toNamed(AppRouter.homeScreen);
         } else {
-          showMessage(AppText.errorText);
+          showMessage('failed'.tr);
         }
       },
     );

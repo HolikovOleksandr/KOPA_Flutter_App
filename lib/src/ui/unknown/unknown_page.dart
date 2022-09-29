@@ -1,5 +1,4 @@
 import 'package:kopa/resources/asset_pathes.dart';
-import 'package:kopa/resources/strings.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +24,7 @@ class UnknownPage extends BaseStatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              AppText.unknownPage,
+              'unknownPage'.tr,
               style: AppFonts.size22.copyWith(
                 color: AppColors.errorInput,
               ),
