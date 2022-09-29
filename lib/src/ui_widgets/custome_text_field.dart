@@ -44,7 +44,7 @@ class _CustomeTextFieldState extends State<CustomeTextField> {
           labelStyle: AppFonts.size14.copyWith(
             color: AppColors.textWhite,
           ),
-          counterStyle: AppFonts.size10.copyWith(
+          counterStyle: AppFonts.size12.copyWith(
             color: AppColors.background,
           ),
           // Focus border

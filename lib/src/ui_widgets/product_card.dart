@@ -59,7 +59,7 @@ class ProductCardWidget extends BaseStatelessWidget {
                       const SizedBox(width: 8),
                       Text(
                         'footSizes'.tr,
-                        style: AppFonts.size10.copyWith(
+                        style: AppFonts.size12.copyWith(
                           color: AppColors.textWhite,
                         ),
                       ),
@@ -79,7 +79,7 @@ class ProductCardWidget extends BaseStatelessWidget {
                               ),
                               Text(
                                 "countrySize".tr,
-                                style: AppFonts.size10.copyWith(
+                                style: AppFonts.size12.copyWith(
                                   color: AppColors.textWhite,
                                 ),
                               ),
@@ -97,7 +97,7 @@ class ProductCardWidget extends BaseStatelessWidget {
                               ),
                               Text(
                                 'height'.tr,
-                                style: AppFonts.size10.copyWith(
+                                style: AppFonts.size12.copyWith(
                                   color: AppColors.textWhite,
                                 ),
                               ),
@@ -115,7 +115,7 @@ class ProductCardWidget extends BaseStatelessWidget {
                               ),
                               Text(
                                 'width'.tr,
-                                style: AppFonts.size10.copyWith(
+                                style: AppFonts.size12.copyWith(
                                   color: AppColors.textWhite,
                                 ),
                               ),
@@ -125,7 +125,7 @@ class ProductCardWidget extends BaseStatelessWidget {
                       ),
                       Text(
                         'material'.tr + Product.products[index].material,
-                        style: AppFonts.size10
+                        style: AppFonts.size12
                             .copyWith(color: AppColors.sneakerTexture),
                       ),
                       const SizedBox(width: 8),

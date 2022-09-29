@@ -1,50 +1,60 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppFonts {
-  static const size26 = TextStyle(
-    fontWeight: FontWeight.w400,
-    fontFamily: 'Poppins',
-    fontSize: 28,
+  static final size26 = GoogleFonts.roboto(
+    textStyle: const TextStyle(
+      fontWeight: FontWeight.normal,
+      fontSize: 26,
+    ),
   );
 
-  static const size22 = TextStyle(
-    fontWeight: FontWeight.w400,
-    fontFamily: 'Poppins',
-    fontSize: 22,
+  static final size22 = GoogleFonts.roboto(
+    textStyle: const TextStyle(
+      fontWeight: FontWeight.normal,
+      fontSize: 22,
+    ),
   );
 
-  static const size22Bold = TextStyle(
-    fontWeight: FontWeight.w700,
-    fontFamily: 'Poppins',
-    fontSize: 22,
+  static final size22Bold = GoogleFonts.roboto(
+    textStyle: const TextStyle(
+      fontWeight: FontWeight.bold,
+      fontSize: 22,
+    ),
   );
 
-  static const size18 = TextStyle(
-    fontWeight: FontWeight.w400,
-    fontFamily: 'Poppins',
-    fontSize: 18,
+  static final size18 = GoogleFonts.roboto(
+    textStyle: const TextStyle(
+      fontWeight: FontWeight.normal,
+      fontSize: 18,
+    ),
   );
 
-  static const size16 = TextStyle(
-    fontWeight: FontWeight.w400,
-    fontFamily: 'Poppins',
-    fontSize: 16,
-  );
-  static const size16Bold = TextStyle(
-    fontWeight: FontWeight.w700,
-    fontFamily: 'Poppins',
-    fontSize: 16,
+  static final size16 = GoogleFonts.roboto(
+    textStyle: const TextStyle(
+      fontWeight: FontWeight.normal,
+      fontSize: 16,
+    ),
   );
 
-  static const size14 = TextStyle(
-    fontWeight: FontWeight.w400,
-    fontFamily: 'Poppins',
-    fontSize: 14,
+  static final size16Bold = GoogleFonts.roboto(
+    textStyle: const TextStyle(
+      fontWeight: FontWeight.bold,
+      fontSize: 16,
+    ),
   );
 
-  static const size10 = TextStyle(
-    fontWeight: FontWeight.w400,
-    fontFamily: 'Poppins',
-    fontSize: 10,
+  static final size14 = GoogleFonts.roboto(
+    textStyle: const TextStyle(
+      fontWeight: FontWeight.normal,
+      fontSize: 14,
+    ),
+  );
+
+  static final size12 = GoogleFonts.roboto(
+    textStyle: const TextStyle(
+      fontWeight: FontWeight.normal,
+      fontSize: 12,
+    ),
   );
 }
