@@ -6,7 +6,7 @@ import 'package:kopa/router/route_pathes.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:kopa/src/core/base_widgets/base_statless_widget.dart';
-import 'package:kopa/src/core/localization/local_controller.dart';
+import 'package:kopa/src/core/controllers/local_controller.dart';
 import 'package:kopa/src/ui_widgets/buttons.dart';
 
 class ProfilePage extends BaseStatelessWidget {
@@ -17,48 +17,50 @@ class ProfilePage extends BaseStatelessWidget {
   Widget getLayout(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.background,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 80,
-        ),
-        child: Column(
-          children: [
-            Row(
+      body: Stack(
+        alignment: Alignment.topRight,
+        children: [
+          Image.asset(AppImages.simpsonMouth),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 80),
+            child: Column(
               children: [
-                const UserImage(),
-                const SizedBox(width: 16),
-                Text(
-                  'userName'.tr,
-                  style: AppFonts.size22Bold.copyWith(
-                    color: AppColors.textWhite,
-                  ),
-                )
+                Row(
+                  children: [
+                    const UserImage(),
+                    const SizedBox(width: 16),
+                    Text(
+                      'userName'.tr,
+                      style: AppFonts.size22Bold.copyWith(
+                        color: AppColors.textWhite,
+                      ),
+                    )
+                  ],
+                ),
+                const SizedBox(height: 32),
+                UserInformationRow(
+                  info: 'number'.tr,
+                  title: 'phone'.tr,
+                ),
+                const SizedBox(height: 32),
+                UserInformationRow(
+                  info: 'town'.tr,
+                  title: 'location'.tr,
+                ),
+                const SizedBox(height: 44),
+                LongBlueButtonWidget(
+                  text: 'exed'.tr,
+                  onPressed: () => Get.toNamed(AppRouter.loginScreen),
+                ),
               ],
             ),
-            const SizedBox(height: 36),
-             UserInformationRow(
-              info: '+380983891691',
-              title: 'phone'.tr,
-            ),
-             UserInformationRow(
-              info: 'Вiнниця',
-              title: 'location'.tr,
-            ),
-            const SizedBox(height: 44),
-            LongBlueButtonWidget(
-              text: 'exed'.tr,
-              onPressed: () => Get.toNamed(AppRouter.loginScreen),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: AppColors.primary,
         child: const Icon(Icons.language),
-        onPressed: () {
-          localeController.buildDialog(context);
-        },
+        onPressed: () => localeController.buildDialog(context),
       ),
     );
   }

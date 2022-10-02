@@ -19,36 +19,40 @@ class LocalStrings extends Translations {
           'width': 'Width/sm',
           'countrySize': 'EU',
           'footSizes': 'Foot size:',
-          'material': 'Material:',
+          'material': 'Material: ',
 
           // User page strings
           'location': 'Location',
           'phone': 'Phone number',
           'userName': 'Golikov Oleksandr',
+          'number': '+38 098 389 16 91',
+          'town': 'Lviv',
         },
 
         // UKRAINIAN
         'uk': {
-          'unknownPage': 'Невiдома сторiнка',
-          'phoneButton': 'Верифiкацiя',
-          'successful': 'Успiх!',
+          'unknownPage': 'Невідома сторінка',
+          'phoneButton': 'Верифікація',
+          'successful': 'Успіх!',
           'failed': 'Помилка',
-          'enter': 'Вхiд',
+          'enter': 'Вхід',
           'exed': 'Вийти',
-          'otpButton': 'Далi',
+          'otpButton': 'Далі',
           'phoneHint': '+38',
 
           // Product strings
           'height': 'Довжина/см',
           'width': 'Ширина/см',
           'countrySize': 'EU',
-          'footSizes': 'Розмiри стопи:',
-          'material': 'Матерiал:',
+          'footSizes': 'Розміри стопи:',
+          'material': 'Матеріал: ',
 
           // User page strings
-          'location': 'Мiсто',
+          'location': 'Місто',
           'phone': 'Контактний номер',
           'userName': 'Голіков Олександр',
+          'number': '+38 098 389 16 91',
+          'town': 'Львів',
         },
       };
 }
