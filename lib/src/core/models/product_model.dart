@@ -1,14 +1,15 @@
 import 'dart:convert';
 
 class ProductModel {
-  int id;
+  String id;
   final String material;
   final String height;
   final String image;
   final String model;
-  final int price;
+  final String price;
   final String width;
   final String size;
+
   ProductModel({
     required this.id,
     required this.material,
@@ -21,12 +22,12 @@ class ProductModel {
   });
 
   ProductModel copyWith({
-    int? id,
+    String? id,
     String? material,
     String? height,
     String? image,
     String? model,
-    int? price,
+    String? price,
     String? width,
     String? size,
   }) {
@@ -59,14 +60,15 @@ class ProductModel {
 
   factory ProductModel.fromMap(Map<String, dynamic> map) {
     return ProductModel(
-      id: map['id']?.toInt() ?? 0,
+      // id: map['id']?.toInt() ?? 0,
+      id: map['id'] ?? '',
       material: map['material'] ?? '',
       height: map['height'] ?? '',
       image: map['image'] ?? '',
       model: map['model'] ?? '',
-      price: map['price']?.toInt() ?? 0,
+      price: map['price'] ?? '',
       width: map['width'] ?? '',
-      size: map['size']?.toInt() ?? 0,
+      size: map['size'] ?? '',
     );
   }
 

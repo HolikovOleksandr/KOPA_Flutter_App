@@ -1,7 +1,4 @@
-// ignore_for_file: avoid_print
-
 import 'dart:convert';
-
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:kopa/src/core/controllers/base_controller.dart';
@@ -22,8 +19,6 @@ class ProductController extends BaseController {
     var productJson = await rootBundle.loadString("assets/json/products.json");
 
     var decodeData = jsonDecode(productJson);
-
-    print(decodeData);
 
     products.value =
         List.from(decodeData).map((e) => ProductModel.fromMap(e)).toList();
