@@ -9,7 +9,7 @@ class ProductModel {
   final String price;
   final String width;
   final String size;
-
+  final String description;
   ProductModel({
     required this.id,
     required this.material,
@@ -19,6 +19,7 @@ class ProductModel {
     required this.price,
     required this.width,
     required this.size,
+    required this.description,
   });
 
   ProductModel copyWith({
@@ -30,6 +31,7 @@ class ProductModel {
     String? price,
     String? width,
     String? size,
+    String? description,
   }) {
     return ProductModel(
       id: id ?? this.id,
@@ -40,6 +42,7 @@ class ProductModel {
       price: price ?? this.price,
       width: width ?? this.width,
       size: size ?? this.size,
+      description: description ?? this.description,
     );
   }
 
@@ -54,13 +57,13 @@ class ProductModel {
     result.addAll({'price': price});
     result.addAll({'width': width});
     result.addAll({'size': size});
+    result.addAll({'description': description});
 
     return result;
   }
 
   factory ProductModel.fromMap(Map<String, dynamic> map) {
     return ProductModel(
-      // id: map['id']?.toInt() ?? 0,
       id: map['id'] ?? '',
       material: map['material'] ?? '',
       height: map['height'] ?? '',
@@ -69,6 +72,7 @@ class ProductModel {
       price: map['price'] ?? '',
       width: map['width'] ?? '',
       size: map['size'] ?? '',
+      description: map['description'] ?? '',
     );
   }
 
@@ -79,7 +83,7 @@ class ProductModel {
 
   @override
   String toString() {
-    return 'ProductModel(id: $id, material: $material, height: $height, image: $image, model: $model, price: $price, width: $width, size: $size)';
+    return 'ProductModel(id: $id, material: $material, height: $height, image: $image, model: $model, price: $price, width: $width, size: $size, description: $description)';
   }
 
   @override
@@ -94,7 +98,8 @@ class ProductModel {
         other.model == model &&
         other.price == price &&
         other.width == width &&
-        other.size == size;
+        other.size == size &&
+        other.description == description;
   }
 
   @override
@@ -106,6 +111,7 @@ class ProductModel {
         model.hashCode ^
         price.hashCode ^
         width.hashCode ^
-        size.hashCode;
+        size.hashCode ^
+        description.hashCode;
   }
 }

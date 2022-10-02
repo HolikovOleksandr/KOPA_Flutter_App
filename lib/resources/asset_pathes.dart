@@ -1,4 +1,5 @@
 class AppIcons {
+  static const String callButton = 'assets/vector/call_button.svg';
   static const String facebook = 'assets/vector/facebook.svg';
   static const String favorite = 'assets/vector/favorite.svg';
   static const String settings = 'assets/vector/settings.svg';

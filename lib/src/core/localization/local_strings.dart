@@ -20,6 +20,7 @@ class LocalStrings extends Translations {
           'countrySize': 'EU',
           'footSizes': 'Foot size:',
           'material': 'Material: ',
+          'treader': 'Treder',
 
           // User page strings
           'location': 'Location',
@@ -46,6 +47,7 @@ class LocalStrings extends Translations {
           'countrySize': 'EU',
           'footSizes': 'Розміри стопи:',
           'material': 'Матеріал: ',
+          'treader': 'Продавець',
 
           // User page strings
           'location': 'Місто',

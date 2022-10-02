@@ -8,6 +8,7 @@ import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:kopa/src/ui/home/pages/product_descripton.dart';
 import 'package:kopa/src/ui_widgets/product_card.dart';
 
 class HomePage extends BaseStatelessWidget {
@@ -52,8 +53,8 @@ class HomePage extends BaseStatelessWidget {
                         var currentProduct = productController.products[index];
                         return ProductCardWidget(
                           currentProduct: currentProduct,
-                          onTab: () =>
-                              Get.toNamed(AppRouter.productDescription),
+                          onTab: () => Get.to(
+                              () => ProductDescripton(product: currentProduct)),
                         );
                       },
                     ),

@@ -1,3 +1,4 @@
+import 'package:kopa/src/ui/home/pages/profile_page.dart';
 import 'package:kopa/src/ui/login/phone/phone_auth_screen.dart';
 import 'package:kopa/src/ui/home/pages/product_descripton.dart';
 import 'package:kopa/src/ui/unknown/unknown_page.dart';
@@ -25,9 +26,13 @@ final routes = [
     page: () => const HomeScreen(),
   ),
   GetPage(
-    name: AppRouter.productDescription,
-    page: () => const ProductDescripton(),
+    name: AppRouter.userProfile,
+    page: () => const ProfilePage(),
   ),
+  // GetPage(
+  //   name: AppRouter.productDescription,
+  //   page: () => const ProductDescripton(),
+  // ),
 ];
 
 const String rootRoute = AppRouter.splashScreen;
