@@ -19,12 +19,12 @@ class HomeScreen extends BaseStatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int selectedPage = 0;
-  final _pageOption = const [
+  final _pageOption = [
     HomePage(),
-    AdvertsPage(),
-    AddAdvertPage(),
-    FavoritePage(),
-    ProfilePage(),
+    const AdvertsPage(),
+    const AddAdvertPage(),
+    const FavoritePage(),
+    const ProfilePage(),
   ];
 
   @override

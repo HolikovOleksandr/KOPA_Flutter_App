@@ -6,7 +6,7 @@ import 'package:kopa/router/route_pathes.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:kopa/src/core/base_widgets/base_statless_widget.dart';
-import 'package:kopa/src/core/localization/local_controller.dart';
+import 'package:kopa/src/core/controllers/local_controller.dart';
 import 'package:kopa/src/ui_widgets/buttons.dart';
 
 class ProfilePage extends BaseStatelessWidget {
