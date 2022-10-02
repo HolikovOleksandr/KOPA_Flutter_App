@@ -74,7 +74,7 @@ class ProductCardWidget extends BaseStatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                currentProduct.size.toString(),
+                                currentProduct.size,
                                 style: AppFonts.size22.copyWith(
                                   color: AppColors.primary,
                                   wordSpacing: 1,
