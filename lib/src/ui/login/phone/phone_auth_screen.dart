@@ -1,7 +1,7 @@
 import 'package:kopa/src/core/base_widgets/base_statefull_widget.dart';
 import 'package:kopa/src/ui/login/phone/phone_auth_controller.dart';
-import 'package:kopa/src/ui_widgets/custome_text_field.dart';
-import 'package:kopa/src/ui_widgets/buttons.dart';
+import 'package:kopa/src/ui/widgets/custome_text_field.dart';
+import 'package:kopa/src/ui/widgets/buttons.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/router/route_pathes.dart';
 import 'package:kopa/resources/colors.dart';
@@ -17,6 +17,7 @@ class PhoneAuthScreen extends BaseStatefulWidget {
 
 class LoginScreenState extends State<PhoneAuthScreen> {
   var authController = PhoneAuthcontroller();
+
   LoginScreenState() {
     Get.put(authController);
   }

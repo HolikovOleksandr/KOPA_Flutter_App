@@ -1,6 +1,6 @@
-import 'package:kopa/src/ui/home/pages/profile_page.dart';
 import 'package:kopa/src/ui/login/phone/phone_auth_screen.dart';
-import 'package:kopa/src/ui/home/pages/product_descripton.dart';
+import 'package:kopa/src/ui/pages/fovorite_page.dart';
+import 'package:kopa/src/ui/pages/profile_page.dart';
 import 'package:kopa/src/ui/unknown/unknown_page.dart';
 import 'package:kopa/src/ui/splash/splash_screen.dart';
 import 'package:kopa/src/ui/login/login_screen.dart';
@@ -24,6 +24,10 @@ final routes = [
   GetPage(
     name: AppRouter.homeScreen,
     page: () => const HomeScreen(),
+  ),
+  GetPage(
+    name: AppRouter.favoriteScreen,
+    page: () => const FavoritePage(),
   ),
   GetPage(
     name: AppRouter.userProfile,

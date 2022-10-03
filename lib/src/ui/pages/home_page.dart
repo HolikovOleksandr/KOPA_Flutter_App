@@ -1,15 +1,14 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:kopa/router/route_pathes.dart';
 import 'package:kopa/src/core/base_widgets/base_statless_widget.dart';
 import 'package:kopa/src/core/controllers/product_controllers.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:kopa/src/ui/home/pages/product_descripton.dart';
-import 'package:kopa/src/ui_widgets/product_card.dart';
+import 'package:kopa/src/ui/pages/product_descripton.dart';
+import 'package:kopa/src/ui/widgets/product_card.dart';
 
 class HomePage extends BaseStatelessWidget {
   ProductController productController = Get.put(ProductController());
@@ -54,15 +53,14 @@ class HomePage extends BaseStatelessWidget {
                         return ProductCardWidget(
                           currentProduct: currentProduct,
                           onTab: () => Get.to(
-                              () => ProductDescripton(product: currentProduct)),
+                            () => ProductDescripton(product: currentProduct),
+                          ),
                         );
                       },
                     ),
                   )
-                : const Center(
-                    child: CircularProgressIndicator(
-                      color: AppColors.primary,
-                    ),
+                : const CircularProgressIndicator(
+                    color: AppColors.primary,
                   ),
           )
         ],

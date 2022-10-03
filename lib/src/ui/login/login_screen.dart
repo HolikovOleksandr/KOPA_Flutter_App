@@ -1,5 +1,5 @@
 import 'package:kopa/src/core/base_widgets/base_statefull_widget.dart';
-import 'package:kopa/src/ui_widgets/buttons.dart';
+import 'package:kopa/src/ui/widgets/buttons.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/router/route_pathes.dart';
 import 'package:kopa/resources/colors.dart';
