@@ -31,12 +31,13 @@ dependencies:
   flutter_svg: ^1.1.4
   google_fonts: ^3.0.1
   
-#LAUNCHER ICON
+  #LAUNCHER ICON
   flutter_launcher_icons: ^0.10.0
   
 flutter_icons:
-  androd: true
+  android: "launcher_icon"
   ios: true
+  remove_alpha_ios: true
   image_path: 'assets/launcher_icon/launcher_icon.png'
 
 dev_dependencies:
