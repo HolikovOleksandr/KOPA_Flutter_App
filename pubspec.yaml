@@ -1,4 +1,5 @@
 name: kopa
+
 description: A new Flutter project.
 
 publish_to: 'none'
@@ -30,19 +31,18 @@ dependencies:
   flutter_svg: ^1.1.4
   google_fonts: ^3.0.1
   
+#LAUNCHER ICON
+  flutter_launcher_icons: ^0.10.0
+  
+flutter_icons:
+  androd: true
+  ios: true
+  image_path: 'assets/launcher_icon/launcher_icon.png'
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-
-#LAUNCHER ICON
-  flutter_launcher_icons: ^0.10.0
-flutter_icons:
-  androd: true
-  ios: true
-  remove_alpha_ios: true
-  image_path: 'assets/app_icon/ios_icon.png'
-  adaptive_icon_foreground: 'assets/app_icon/android_icon.png'
 
 flutter:
   generate: true
@@ -53,6 +53,6 @@ flutter:
     - assets/1x/
     - assets/2x/
     - assets/3x/
-    - assets/app_icon/
+    - assets/launcher_icon/
     - assets/json/
 
