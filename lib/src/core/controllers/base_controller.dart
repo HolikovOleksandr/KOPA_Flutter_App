@@ -3,7 +3,7 @@ import 'package:kopa/resources/colors.dart';
 import 'package:get/get.dart';
 
 class BaseController extends GetxController {
-  showMessage(var text) {
+  showMessage(String text) {
     return Fluttertoast.showToast(
       msg: text,
       toastLength: Toast.LENGTH_SHORT,

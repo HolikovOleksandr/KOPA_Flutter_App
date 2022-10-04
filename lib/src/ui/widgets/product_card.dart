@@ -1,3 +1,4 @@
+import 'package:kopa/router/route_pathes.dart';
 import 'package:kopa/src/core/base_widgets/base_statless_widget.dart';
 import 'package:get/get_rx/src/rx_typedefs/rx_typedefs.dart';
 import 'package:kopa/src/core/models/product_model.dart';
@@ -150,7 +151,7 @@ class ProductCardWidget extends BaseStatelessWidget {
               SizedBox(
                 width: 60,
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () => Get.toNamed(AppRouter.favoriteScreen),
                   child: SvgPicture.asset(
                     AppIcons.favorite,
                     color: AppColors.textWhite,

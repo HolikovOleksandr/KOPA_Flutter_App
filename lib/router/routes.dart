@@ -1,10 +1,10 @@
-import 'package:kopa/src/ui/home/pages/profile_page.dart';
 import 'package:kopa/src/ui/login/phone/phone_auth_screen.dart';
-import 'package:kopa/src/ui/home/pages/product_descripton.dart';
 import 'package:kopa/src/ui/unknown/unknown_page.dart';
 import 'package:kopa/src/ui/splash/splash_screen.dart';
+import 'package:kopa/src/ui/pages/fovorite_page.dart';
 import 'package:kopa/src/ui/login/login_screen.dart';
 import 'package:kopa/src/ui/home/home_screen.dart';
+import 'package:kopa/src/ui/pages/user_page.dart';
 import 'package:kopa/router/route_pathes.dart';
 import 'package:get/get.dart';
 
@@ -15,7 +15,7 @@ final routes = [
   ),
   GetPage(
     name: AppRouter.loginScreen,
-    page: () => const LoginScreen(),
+    page: () => LoginScreen(),
   ),
   GetPage(
     name: AppRouter.phoneAuthScreen,
@@ -24,6 +24,10 @@ final routes = [
   GetPage(
     name: AppRouter.homeScreen,
     page: () => const HomeScreen(),
+  ),
+  GetPage(
+    name: AppRouter.favoriteScreen,
+    page: () => const FavoritePage(),
   ),
   GetPage(
     name: AppRouter.userProfile,

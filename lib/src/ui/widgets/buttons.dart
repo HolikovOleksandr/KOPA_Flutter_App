@@ -68,12 +68,12 @@ class LongBlueButtonWidget extends BaseStatelessWidget {
 }
 
 // Register button
-class RegisterButonWidget extends BaseStatelessWidget {
+class CircleAuthButton extends BaseStatelessWidget {
   final String svgPath;
   final Callback onTap;
   final Color color;
 
-  const RegisterButonWidget({
+  const CircleAuthButton({
     Key? key,
     required this.svgPath,
     required this.onTap,
@@ -84,7 +84,7 @@ class RegisterButonWidget extends BaseStatelessWidget {
   Widget getLayout(BuildContext context) {
     return Container(
       decoration: _buttonRegisterStyle(color),
-      height: MediaQuery.of(context).size.height * 0.17,
+      height: MediaQuery.of(context).size.height * 0.08,
       width: MediaQuery.of(context).size.width * 0.17,
       child: GestureDetector(
         onTap: onTap,

@@ -13,7 +13,7 @@ class SplashScreen extends BaseStatelessWidget {
     return AnimatedSplashScreen(
       backgroundColor: AppColors.background,
       splashIconSize: double.infinity,
-      nextScreen: const LoginScreen(),
+      nextScreen: LoginScreen(),
       splash: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(

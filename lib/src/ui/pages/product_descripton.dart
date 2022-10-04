@@ -8,7 +8,7 @@ import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ProductDescripton extends BaseStatelessWidget {
+class ProductDescripton extends BaseStatelessWidget  {
   final ProductModel product;
 
   const ProductDescripton({

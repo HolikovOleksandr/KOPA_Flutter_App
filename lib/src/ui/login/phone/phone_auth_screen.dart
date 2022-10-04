@@ -1,7 +1,7 @@
 import 'package:kopa/src/core/base_widgets/base_statefull_widget.dart';
-import 'package:kopa/src/ui/login/phone/phone_auth_controller.dart';
-import 'package:kopa/src/ui_widgets/custome_text_field.dart';
-import 'package:kopa/src/ui_widgets/buttons.dart';
+import 'package:kopa/src/ui/login/phone/auth_controller.dart';
+import 'package:kopa/src/ui/widgets/custome_text_field.dart';
+import 'package:kopa/src/ui/widgets/buttons.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/router/route_pathes.dart';
 import 'package:kopa/resources/colors.dart';
@@ -16,7 +16,8 @@ class PhoneAuthScreen extends BaseStatefulWidget {
 }
 
 class LoginScreenState extends State<PhoneAuthScreen> {
-  var authController = PhoneAuthcontroller();
+  var authController = Authcontroller();
+
   LoginScreenState() {
     Get.put(authController);
   }
@@ -29,7 +30,7 @@ class LoginScreenState extends State<PhoneAuthScreen> {
   @override
   void dispose() {
     authController.dispose();
-    Get.delete<PhoneAuthcontroller>();
+    Get.delete<Authcontroller>();
     super.dispose();
   }
 
@@ -37,8 +38,8 @@ class LoginScreenState extends State<PhoneAuthScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.background,
-      body: GetBuilder<PhoneAuthcontroller>(
-        builder: (PhoneAuthcontroller controller) => SingleChildScrollView(
+      body: GetBuilder<Authcontroller>(
+        builder: (Authcontroller controller) => SingleChildScrollView(
           child: Column(
             children: [
               const SizedBox(height: 60),
