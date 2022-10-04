@@ -1,20 +1,21 @@
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
-import 'package:kopa/resources/asset_pathes.dart';
-import 'package:kopa/resources/fonts.dart';
-import 'package:kopa/router/route_pathes.dart';
-import 'package:kopa/resources/colors.dart';
-import 'package:flutter/material.dart';
 import 'package:kopa/src/core/base_widgets/base_statless_widget.dart';
 import 'package:kopa/src/core/controllers/local_controller.dart';
 import 'package:kopa/src/ui/widgets/buttons.dart';
+import 'package:kopa/resources/asset_pathes.dart';
+import 'package:kopa/router/route_pathes.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kopa/resources/colors.dart';
+import 'package:kopa/resources/fonts.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ProfilePage extends BaseStatelessWidget {
   static final localeController = LocalController();
+
   const ProfilePage({Key? key}) : super(key: key);
 
   @override
-  Widget getLayout(BuildContext context) {
+  Widget getLayout(context) {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: Stack(
@@ -44,7 +45,7 @@ class ProfilePage extends BaseStatelessWidget {
                 ),
                 const SizedBox(height: 32),
                 UserInformationRow(
-                  info: 'town'.tr,
+                  info: 'Львів',
                   title: 'location'.tr,
                 ),
                 const SizedBox(height: 44),
