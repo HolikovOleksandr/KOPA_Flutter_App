@@ -1,6 +1,6 @@
 import 'package:kopa/src/core/base_widgets/base_statless_widget.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
-import 'package:kopa/src/ui/login/login_screen.dart';
+import 'package:kopa/src/ui/screens/login/login_screen.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:flutter/material.dart';

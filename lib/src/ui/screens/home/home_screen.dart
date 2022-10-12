@@ -1,11 +1,11 @@
 import 'package:kopa/src/core/base_widgets/base_statefull_widget.dart';
+import 'package:kopa/src/ui/screens/home/tabs/add_advert_page.dart';
+import 'package:kopa/src/ui/screens/home/tabs/adverts_page.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
-import 'package:kopa/src/ui/pages/add_advert_page.dart';
-import 'package:kopa/src/ui/pages/fovorite_page.dart';
-import 'package:kopa/src/ui/pages/adverts_page.dart';
-import 'package:kopa/src/ui/pages/home_page.dart';
+import 'package:kopa/src/ui/screens/home/tabs/fovorite_page.dart';
+import 'package:kopa/src/ui/screens/home/tabs/home_page.dart';
+import 'package:kopa/src/ui/screens/user_page.dart';
 import 'package:kopa/resources/asset_pathes.dart';
-import 'package:kopa/src/ui/pages/user_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:flutter/material.dart';

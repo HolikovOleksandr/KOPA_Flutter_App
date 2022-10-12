@@ -1,5 +1,5 @@
 import 'package:kopa/src/core/base_widgets/base_statless_widget.dart';
-import 'package:kopa/src/ui/login/phone/auth_controller.dart';
+import 'package:kopa/src/ui/screens/login/auth_controller.dart';
 import 'package:kopa/src/ui/widgets/buttons.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/router/route_pathes.dart';

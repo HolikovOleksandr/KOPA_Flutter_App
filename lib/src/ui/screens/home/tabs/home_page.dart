@@ -1,5 +1,3 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
 import 'package:kopa/src/core/base_widgets/base_statless_widget.dart';
 import 'package:kopa/src/core/controllers/product_controllers.dart';
@@ -7,12 +5,12 @@ import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:kopa/src/ui/pages/product_descripton.dart';
-import 'package:kopa/src/ui/widgets/product_card.dart';
+import 'package:kopa/src/ui/widgets/product_list.dart';
 
 class HomePage extends BaseStatelessWidget {
-  ProductController productController = Get.put(ProductController());
   HomePage({Key? key}) : super(key: key);
+
+  final ProductController productController = Get.put(ProductController());
 
   @override
   Widget getLayout(BuildContext context) {
@@ -43,26 +41,7 @@ class HomePage extends BaseStatelessWidget {
               Image.asset(AppImages.simpsonMouth),
             ],
           ),
-          Obx(
-            () => productController.isDataLoadingComplited.value == true
-                ? Expanded(
-                    child: ListView.builder(
-                      itemCount: productController.products.length,
-                      itemBuilder: (context, index) {
-                        var currentProduct = productController.products[index];
-                        return ProductCardWidget(
-                          currentProduct: currentProduct,
-                          onTab: () => Get.to(
-                            () => ProductDescripton(product: currentProduct),
-                          ),
-                        );
-                      },
-                    ),
-                  )
-                : const CircularProgressIndicator(
-                    color: AppColors.primary,
-                  ),
-          )
+          ProductList(productController: productController)
         ],
       ),
     );
