@@ -17,6 +17,7 @@ dependencies:
   get: ^4.6.5
 
   #FIREBASE PACKAGES
+  firebase_storage: ^10.3.11
   cloud_firestore: ^3.4.4
   firebase_core: ^1.21.1
   firebase_auth: ^3.7.0

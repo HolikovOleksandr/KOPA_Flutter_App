@@ -1,4 +1,7 @@
 class AppIcons {
+  static const String horizontalArrow = 'assets/vector/horizontal_arrow.svg';
+  static const String verticalArrow = 'assets/vector/vertical_arrow.svg';
+  static const String lineSneaker = 'assets/vector/line_sneaker.svg';
   static const String callButton = 'assets/vector/call_button.svg';
   static const String facebook = 'assets/vector/facebook.svg';
   static const String favorite = 'assets/vector/favorite.svg';
