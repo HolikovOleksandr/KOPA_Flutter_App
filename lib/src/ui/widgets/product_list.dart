@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:kopa/src/core/controllers/product_controllers.dart';
-import 'package:kopa/src/ui/screens/product_descripton.dart';
+import 'package:kopa/src/ui/screens/home/tabs/product_descripton.dart';
 import 'package:kopa/src/ui/widgets/product_card.dart';
 
 class ProductList extends StatelessWidget {

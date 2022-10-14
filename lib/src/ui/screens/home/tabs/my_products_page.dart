@@ -3,21 +3,21 @@ import 'package:kopa/resources/colors.dart';
 import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';
 
-class AddAdvertPage extends BaseStatefulWidget {
-  const AddAdvertPage({Key? key}) : super(key: key);
+class MyProductsPage extends BaseStatefulWidget {
+  const MyProductsPage({Key? key}) : super(key: key);
 
   @override
-  State<AddAdvertPage> createState() => _AddAdvertPageState();
+  State<MyProductsPage> createState() => _MyProductsPageState();
 }
 
-class _AddAdvertPageState extends State<AddAdvertPage> {
+class _MyProductsPageState extends State<MyProductsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: Center(
         child: Text(
-          'Adding product page',
+          'Adverts page',
           style: AppFonts.size26.copyWith(
             color: AppColors.primary,
           ),

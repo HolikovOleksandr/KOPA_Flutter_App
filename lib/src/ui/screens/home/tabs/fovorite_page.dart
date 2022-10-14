@@ -17,7 +17,12 @@ class _FavoritePageState extends State<FavoritePage> {
       backgroundColor: AppColors.background,
       body: Column(
         children: [
-          Image.asset(AppImages.simpsonMouth),
+          Row(
+            children: [
+              const Spacer(),
+              Image.asset(AppImages.simpsonMouth),
+            ],
+          ),
         ],
       ),
     );
