@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:kopa/src/core/base_widgets/base_statless_widget.dart';
+import 'package:kopa/src/core/ui/widgets/base_statless_widget.dart';
 import 'package:kopa/src/core/controllers/product_controllers.dart';
-import 'package:kopa/resources/asset_pathes.dart';
-import 'package:kopa/resources/colors.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
 import 'package:kopa/src/ui/widgets/product_list.dart';
+import 'package:kopa/resources/asset_pathes.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kopa/resources/colors.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomePage extends BaseStatelessWidget {
   HomePage({Key? key}) : super(key: key);

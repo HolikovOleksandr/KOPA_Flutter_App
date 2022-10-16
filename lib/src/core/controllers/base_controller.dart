@@ -1,17 +1,50 @@
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:kopa/resources/colors.dart';
+import 'package:kopa/src/core/ui/show_massage_mixin.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class BaseController extends GetxController {
-  showMessage(String text) {
-    return Fluttertoast.showToast(
-      msg: text,
-      toastLength: Toast.LENGTH_SHORT,
-      gravity: ToastGravity.BOTTOM,
-      timeInSecForIosWeb: 2,
-      backgroundColor: AppColors.background,
-      textColor: AppColors.textWhite,
-      fontSize: 14.0,
-    );
+abstract class BaseController extends GetxController with ShowMassageMixin{
+  bool _contentProgress = false;
+
+  bool get contentProgress => _contentProgress;
+
+  bool _globalProgress = false;
+
+  bool get globalProgress => _globalProgress;
+
+  RxBool _isError = RxBool(false);
+
+  RxBool get isError => _isError;
+
+  @protected
+  void resetError() {
+    if (_isError.isTrue) {
+      _isError(false);
+    }
+  }
+
+  @protected
+  void showContentProgress() {
+    _contentProgress = true;
+    update();
+  }
+
+  @protected
+  void hideContentProgress() {
+    _contentProgress = false;
+    update();
+  }
+
+  @protected
+  void showProgress() {
+    _globalProgress = true;
+    update();
+  }
+
+  @protected
+  void hideProgress() {
+    _globalProgress = false;
+    update();
   }
 }

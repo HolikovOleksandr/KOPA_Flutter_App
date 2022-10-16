@@ -13,14 +13,20 @@ class LocalStrings extends Translations {
           'exed': 'Exid',
           'otpButton': 'Next',
           'phoneHint': '+38',
+          'save': 'Save',
+          'addPhoto': 'Add photo',
 
           // Product strings
           'height': 'Height/sm',
           'width': 'Width/sm',
           'countrySize': 'EU',
           'footSizes': 'Foot size:',
-          'material': 'Material: ',
+          'material': 'Material',
           'treader': 'Treder',
+          'size': 'Size',
+          'model': 'Model',
+          'description': 'Description',
+          'price': 'Price',
 
           // User page strings
           'location': 'Location',
@@ -40,6 +46,8 @@ class LocalStrings extends Translations {
           'exed': 'Вийти',
           'otpButton': 'Далі',
           'phoneHint': '+38',
+          'save': 'Зберегти',
+          'addPhoto': 'Додати фото',
 
           // Product strings
           'height': 'Довжина/см',
@@ -48,6 +56,10 @@ class LocalStrings extends Translations {
           'footSizes': 'Розміри стопи:',
           'material': 'Матеріал: ',
           'treader': 'Продавець',
+          'size': 'Розмір',
+          'model': 'Модель',
+          'description': 'Опис',
+          'price': 'Ціна',
 
           // User page strings
           'location': 'Місто',

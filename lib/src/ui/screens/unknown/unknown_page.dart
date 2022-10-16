@@ -1,9 +1,9 @@
+import 'package:kopa/src/core/ui/widgets/base_statless_widget.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:kopa/src/core/base_widgets/base_statless_widget.dart';
 
 class UnknownPage extends BaseStatelessWidget {
   const UnknownPage({Key? key}) : super(key: key);

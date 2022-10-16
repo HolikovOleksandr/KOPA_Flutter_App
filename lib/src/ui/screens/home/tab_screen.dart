@@ -1,10 +1,10 @@
-import 'package:kopa/src/core/base_widgets/base_statefull_widget.dart';
-import 'package:kopa/src/ui/screens/home/tabs/add_advert_page.dart';
-import 'package:kopa/src/ui/screens/home/tabs/adverts_page.dart';
-import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:kopa/src/core/ui/widgets/base_statefull_widget.dart';
+import 'package:kopa/src/ui/screens/home/tabs/add_protuct_page.dart';
+import 'package:kopa/src/ui/screens/home/tabs/my_products_page.dart';
 import 'package:kopa/src/ui/screens/home/tabs/fovorite_page.dart';
 import 'package:kopa/src/ui/screens/home/tabs/home_page.dart';
-import 'package:kopa/src/ui/screens/user_page.dart';
+import 'package:kopa/src/ui/screens/home/tabs/user_page.dart';
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:kopa/resources/asset_pathes.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kopa/resources/colors.dart';
@@ -22,8 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final _pageOption = [
     HomePage(),
-    const AdvertsPage(),
-    const AddAdvertPage(),
+    const MyProductsPage(),
+    const AddProductPage(),
     const FavoritePage(),
     const ProfilePage(),
   ];
