@@ -1,10 +1,10 @@
-import 'package:kopa/src/ui/screens/home/tab_screen.dart';
-import 'package:kopa/src/ui/screens/home/tabs/fovorite_page.dart';
-import 'package:kopa/src/ui/screens/login/login_screen.dart';
 import 'package:kopa/src/ui/screens/login/phone_auth_screen.dart';
+import 'package:kopa/src/ui/screens/home/tabs/fovorite_page.dart';
+import 'package:kopa/src/ui/screens/unknown/unknown_page.dart';
 import 'package:kopa/src/ui/screens/splash/splash_screen.dart';
 import 'package:kopa/src/ui/screens/home/tabs/user_page.dart';
-import 'package:kopa/src/ui/unknown/unknown_page.dart';
+import 'package:kopa/src/ui/screens/login/login_screen.dart';
+import 'package:kopa/src/ui/screens/home/tab_screen.dart';
 import 'package:kopa/router/route_pathes.dart';
 import 'package:get/get.dart';
 

@@ -1,5 +1,5 @@
+import 'package:kopa/src/core/controllers/auth_controller.dart';
 import 'package:kopa/src/core/ui/widgets/base_statefull_widget.dart';
-import 'package:kopa/src/ui/screens/login/auth_controller.dart';
 import 'package:kopa/src/ui/widgets/custome_text_field.dart';
 import 'package:kopa/src/ui/widgets/buttons.dart';
 import 'package:kopa/resources/asset_pathes.dart';
@@ -20,18 +20,6 @@ class LoginScreenState extends State<PhoneAuthScreen> {
 
   LoginScreenState() {
     Get.put(authController);
-  }
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    authController.dispose();
-    Get.delete<Authcontroller>();
-    super.dispose();
   }
 
   @override

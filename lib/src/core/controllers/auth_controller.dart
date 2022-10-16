@@ -10,8 +10,8 @@ class Authcontroller extends BaseController {
   TextEditingController otpController = TextEditingController();
   FirebaseAuth auth = FirebaseAuth.instance;
   bool otpVerifyActive = false;
-  bool isLoading = false;
   String verificationID = '';
+  bool isLoading = false;
   User? user;
 
   // PHONE
@@ -45,12 +45,13 @@ class Authcontroller extends BaseController {
 
     await auth.signInWithCredential(credential).then(
       (value) {
-        (() => user = FirebaseAuth.instance.currentUser);
+        user = FirebaseAuth.instance.currentUser;
         update();
       },
     ).whenComplete(
       () {
         if (user != null) {
+          showMessage('successful'.tr);
           () => Get.toNamed(AppRouter.homeScreen);
         } else {
           showMessage('failed'.tr);
