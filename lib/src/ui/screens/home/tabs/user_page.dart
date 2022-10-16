@@ -120,7 +120,7 @@ class UserImage extends StatelessWidget {
       alignment: Alignment.bottomRight,
       children: const [
         CircleAvatar(
-          // backgroundImage: AssetImage(AppImages.userPhoto),
+          backgroundImage: AssetImage(AppImages.userPhoto),
           radius: 45,
         ),
         AddUserPhotoButton(),

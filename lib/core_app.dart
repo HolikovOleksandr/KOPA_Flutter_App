@@ -11,7 +11,7 @@ class CoreApp extends BaseStatelessWidget {
   Widget getLayout(BuildContext context) {
     return GetMaterialApp(
       translations: LocalStrings(),
-      locale: const Locale('en'),
+      locale: const Locale('uk'),
       debugShowCheckedModeBanner: false,
       unknownRoute: unknownRoute,
       initialRoute: rootRoute,

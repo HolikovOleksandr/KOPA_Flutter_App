@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-abstract class BaseController extends GetxController with ShowMassageMixin{
+abstract class BaseController extends GetxController with ShowMassageMixin {
   bool _contentProgress = false;
 
   bool get contentProgress => _contentProgress;
@@ -13,7 +13,7 @@ abstract class BaseController extends GetxController with ShowMassageMixin{
 
   bool get globalProgress => _globalProgress;
 
-  RxBool _isError = RxBool(false);
+  final RxBool _isError = RxBool(false);
 
   RxBool get isError => _isError;
 

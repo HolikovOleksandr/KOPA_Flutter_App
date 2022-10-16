@@ -1,6 +1,6 @@
+import 'package:kopa/resources/asset_pathes.dart';
 import 'package:kopa/src/core/ui/widgets/base_statefull_widget.dart';
 import 'package:kopa/resources/colors.dart';
-import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';
 
 class MyProductsPage extends BaseStatefulWidget {
@@ -15,13 +15,15 @@ class _MyProductsPageState extends State<MyProductsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.background,
-      body: Center(
-        child: Text(
-          'Adverts page',
-          style: AppFonts.size26.copyWith(
-            color: AppColors.primary,
+      body: Column(
+        children: [
+          Row(
+            children: [
+              const Spacer(),
+              Image.asset(AppImages.simpsonMouth),
+            ],
           ),
-        ),
+        ],
       ),
     );
   }
