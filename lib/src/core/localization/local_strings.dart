@@ -27,6 +27,8 @@ class LocalStrings extends Translations {
           'model': 'Model',
           'description': 'Description',
           'price': 'Price',
+          'apply': 'Apply',
+          'cancel': 'Cancel',
 
           // User page strings
           'location': 'Location',
@@ -60,6 +62,8 @@ class LocalStrings extends Translations {
           'model': 'Модель',
           'description': 'Опис',
           'price': 'Ціна',
+          'apply': 'Застосувати',
+          'cancel': 'Скинути',
 
           // User page strings
           'location': 'Місто',
