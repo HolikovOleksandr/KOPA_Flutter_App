@@ -1,8 +1,8 @@
-import 'package:kopa/router/route_pathes.dart';
-import 'package:kopa/src/core/base_widgets/base_statless_widget.dart';
+import 'package:kopa/src/core/ui/widgets/base_statless_widget.dart';
 import 'package:get/get_rx/src/rx_typedefs/rx_typedefs.dart';
 import 'package:kopa/src/core/models/product_model.dart';
 import 'package:kopa/resources/asset_pathes.dart';
+import 'package:kopa/router/route_pathes.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:kopa/resources/fonts.dart';
 import 'package:flutter/material.dart';

@@ -1,4 +1,4 @@
-import 'package:kopa/src/core/base_widgets/base_statless_widget.dart';
+import 'package:kopa/src/core/ui/widgets/base_statless_widget.dart';
 import 'package:kopa/src/core/controllers/local_controller.dart';
 import 'package:kopa/src/ui/widgets/buttons.dart';
 import 'package:kopa/resources/asset_pathes.dart';
@@ -120,7 +120,7 @@ class UserImage extends StatelessWidget {
       alignment: Alignment.bottomRight,
       children: const [
         CircleAvatar(
-          backgroundImage: AssetImage(AppImages.userPhoto),
+          // backgroundImage: AssetImage(AppImages.userPhoto),
           radius: 45,
         ),
         AddUserPhotoButton(),
@@ -147,7 +147,7 @@ class AddUserPhotoButton extends StatelessWidget {
           ),
         ),
         GestureDetector(
-          onTap: () => Get.toNamed(AppRouter.loginScreen),
+          onTap: () {},
           child: SvgPicture.asset(AppIcons.add),
         ),
       ],

@@ -1,17 +1,4 @@
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:kopa/resources/colors.dart';
 import 'package:get/get.dart';
+import 'package:kopa/src/core/ui/show_massage_mixin.dart';
 
-class BaseController extends GetxController {
-  showMessage(String text) {
-    return Fluttertoast.showToast(
-      msg: text,
-      toastLength: Toast.LENGTH_SHORT,
-      gravity: ToastGravity.BOTTOM,
-      timeInSecForIosWeb: 2,
-      backgroundColor: AppColors.background,
-      textColor: AppColors.textWhite,
-      fontSize: 14.0,
-    );
-  }
-}
+abstract class BaseController extends GetxController with ShowMassageMixin {}

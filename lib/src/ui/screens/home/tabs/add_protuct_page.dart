@@ -1,13 +1,11 @@
-// ignore_for_file: must_be_immutable
-
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
-
+import 'package:kopa/src/core/ui/widgets/base_statefull_widget.dart';
 import 'package:kopa/resources/asset_pathes.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kopa/resources/colors.dart';
 import 'package:kopa/resources/fonts.dart';
-import 'package:kopa/src/core/base_widgets/base_statefull_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:kopa/src/core/ui/widgets/base_statless_widget.dart';
 
 class AddProductPage extends BaseStatefulWidget {
   const AddProductPage({Key? key}) : super(key: key);
@@ -45,7 +43,7 @@ class _AddProductPageState extends State<AddProductPage> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              TitleWidget(text: 'addPhoto', withInput: false),
+              const TitleWidget(text: 'addPhoto', withInput: false),
               GridView.count(
                 shrinkWrap: true,
                 crossAxisCount: 4,
@@ -61,15 +59,15 @@ class _AddProductPageState extends State<AddProductPage> {
                   AddPhoto(),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 24, 16, 8),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(16, 24, 16, 8),
                 child: TitleWidget(text: 'size', withInput: false),
               ),
               const ChangeProductSize(),
               Padding(
                 padding: const EdgeInsets.fromLTRB(16, 24, 16, 8),
                 child: Column(
-                  children: [
+                  children: const [
                     TitleWidget(text: 'model', withInput: true),
                     TitleWidget(text: 'material', withInput: true),
                     TitleWidget(text: 'description', withInput: true),
@@ -85,11 +83,11 @@ class _AddProductPageState extends State<AddProductPage> {
   }
 }
 
-class AddPhoto extends StatelessWidget {
+class AddPhoto extends BaseStatelessWidget {
   const AddPhoto({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget getLayout(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(6),
       child: GestureDetector(
@@ -106,8 +104,8 @@ class AddPhoto extends StatelessWidget {
   }
 }
 
-class TitleWidget extends StatelessWidget {
-  TitleWidget({
+class TitleWidget extends BaseStatelessWidget {
+  const TitleWidget({
     Key? key,
     required this.text,
     required this.withInput,
@@ -117,10 +115,10 @@ class TitleWidget extends StatelessWidget {
   final String text;
   final bool withInput;
 
-  dynamic controller;
+  final dynamic controller;
 
   @override
-  Widget build(BuildContext context) {
+  Widget getLayout(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Column(
@@ -169,11 +167,11 @@ class TitleWidget extends StatelessWidget {
   }
 }
 
-class ChangeProductSize extends StatelessWidget {
+class ChangeProductSize extends BaseStatelessWidget {
   const ChangeProductSize({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget getLayout(BuildContext context) {
     return Container(
       width: Get.size.width,
       height: 233,
@@ -193,7 +191,7 @@ class ChangeProductSize extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizePicer(
+              SizePicker(
                 doubleValue: true,
                 sizeType: 'size',
                 valueWidget: Text(
@@ -203,7 +201,7 @@ class ChangeProductSize extends StatelessWidget {
                   ),
                 ),
               ),
-              SizePicer(
+              SizePicker(
                 doubleValue: false,
                 sizeType: 'width',
                 valueWidget: Text(
@@ -213,7 +211,7 @@ class ChangeProductSize extends StatelessWidget {
                   ),
                 ),
               ),
-              SizePicer(
+              SizePicker(
                 doubleValue: false,
                 sizeType: 'height',
                 valueWidget: Text(
@@ -232,8 +230,8 @@ class ChangeProductSize extends StatelessWidget {
   }
 }
 
-class SizePicer extends StatelessWidget {
-  const SizePicer({
+class SizePicker extends BaseStatelessWidget {
+  const SizePicker({
     Key? key,
     required this.valueWidget,
     required this.sizeType,
@@ -247,7 +245,7 @@ class SizePicer extends StatelessWidget {
   final bool doubleValue;
 
   @override
-  Widget build(BuildContext context) {
+  Widget getLayout(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
